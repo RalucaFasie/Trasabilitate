@@ -144,11 +144,14 @@ function openBlock(blockName) {
 
   // datele efective ale block-ului
   const detailsContainer = document.getElementById(`details-${blockName}`);
-  detailsContainer.innerHTML = "";
+  detailsContainer.textContent = "";
 
   for (const key in block.data) {
     const p = document.createElement("p");
-    p.innerHTML = `<b>${capitalize(key)}:</b> ${block.data[key]}`;
+    const b = document.createElement("b");
+    b.textContent = capitalize(key) + ": ";
+    p.appendChild(b);
+    p.appendChild(document.createTextNode(block.data[key]));
     detailsContainer.appendChild(p);
   }
 
