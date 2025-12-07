@@ -42,83 +42,76 @@ main {
 }
 
 .interface {
-    background-image: url("assets/lant_trasabilitate.png");
+    background-image: url("assets/Paine.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 1024px;
-    position: relative;
     width: 100%;
+    max-width: 1152px;
+    height: 768px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.btn-ferma,
-.btn-transport,
-.btn-moara,
-.btn-iot,
-.btn-magazin {
+.interface button {
     position: absolute;
     background: transparent;
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+}
+
+.interface button:hover {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.3);
+    transition: 0.2s ease-in-out;
+}
+
+.interface button:active {
+    transform: scale(0.94);
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.35);
+    transition: 0.1s ease-in-out;
 }
 
 .btn-ferma {
-    top: 160px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+    top: 55%;
+    left: 12%;
+    width: 12%;
+    height: 16%;
 }
 
 .btn-transport {
-    top: 290px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+    top: 42%;
+    left: 28%;
+    width: 12%;
+    height: 16%;
 }
 
 .btn-moara {
-    top: 420px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+    top: 38%;
+    left: 45%;
+    width: 12%;
+    height: 16%;
 }
 
 .btn-iot {
-    top: 550px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+    top: 48%;
+    left: 62%;
+    width: 12%;
+    height: 16%;
 }
 
 .btn-magazin {
-    top: 680px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
-}
-
-.btn-ferma:hover,
-.btn-transport:hover,
-.btn-moara:hover,
-.btn-iot:hover,
-.btn-magazin:hover {
-    outline: 3px solid white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    border-radius: 14px;
-}
-
-.btn-ferma:active,
-.btn-transport:active,
-.btn-moara:active,
-.btn-iot:active,
-.btn-magazin:active {
-    transform: scale(0.94);
-    outline: 3px solid white;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-    transition: all 0.1s ease;
+    top: 58%;
+    left: 78%;
+    width: 12%;
+    height: 16%;
 }
 
 /* Modal Styles */
