@@ -200,18 +200,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-        padding: 20px;
-    }
-
-    #modal-title {
-        font-size: 1.4rem;
-    }
-}
-
+/* Tablets and medium screens */
 @media (max-width: 900px) {
     .interface {
         min-height: 100vh;
@@ -219,11 +208,198 @@ body {
         background-size: cover;
         background-position: center;
     }
-    .btn-ferma       { top: 28%; left: 7%;  width: 22%; height: 12%; }
-    .btn-transport   { top: 28%; left: 30%; width: 22%; height: 12%; }
-    .btn-moara       { top: 28%; left: 53%; width: 22%; height: 12%; }
-    .btn-brutaria    { top: 28%; left: 76%; width: 22%; height: 12%; }
-    .btn-magazin     { top: 46%; left: 36%; width: 28%; height: 14%; }
-    .btn-certificari { top: 72%; left: 10%; width: 36%; height: 14%; }
-    .btn-verificare  { top: 72%; left: 54%; width: 36%; height: 14%; }
+    
+    .btn-ferma {
+        top: 30%;
+        left: 8%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-transport {
+        top: 30%;
+        left: 28%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-moara {
+        top: 30%;
+        left: 48%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-iot {
+        top: 30%;
+        left: 68%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-magazin {
+        top: 48%;
+        left: 38%;
+        width: 24%;
+        height: 14%;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 8% auto;
+        padding: 25px;
+    }
+    
+    .info-section h3 {
+        font-size: 1rem;
+    }
+    
+    .hash-display,
+    .data-display {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .modal-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .close {
+        font-size: 32px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .info-section {
+        padding: 15px;
+    }
+    
+    .info-section h3 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .hash-display {
+        font-size: 0.75rem;
+        padding: 10px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    
+    .data-display {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    .data-display p {
+        margin: 6px 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .interface button {
+        min-width: 60px;
+        min-height: 40px;
+    }
+    
+    .btn-ferma {
+        top: 28%;
+        left: 5%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-transport {
+        top: 28%;
+        left: 27%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-moara {
+        top: 28%;
+        left: 49%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-iot {
+        top: 28%;
+        left: 71%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-magazin {
+        top: 45%;
+        left: 35%;
+        width: 30%;
+        height: 12%;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 5% auto;
+        padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-right: 30px;
+    }
+    
+    .close {
+        font-size: 28px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .block-info {
+        gap: 15px;
+    }
+    
+    .info-section {
+        padding: 12px;
+    }
+    
+    .info-section h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .hash-display {
+        font-size: 0.7rem;
+        padding: 8px;
+        line-height: 1.4;
+    }
+    
+    .data-display {
+        font-size: 0.8rem;
+        padding: 8px;
+        min-height: 60px;
+    }
+    
+    .data-display p {
+        margin: 5px 0;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
 }
