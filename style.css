@@ -146,6 +146,16 @@ html, body {
     font-weight: 600;
 }
 
+/* Invisible Hotspots */
+.hotspot {
+    position: absolute;
+    background: transparent !important;
+    opacity: 0 !important;
+    border: none !important;
+    z-index: 10;
+    cursor: pointer;
+}
+
 /* ----------- MOBILE LAYOUT (FULL SCREEN DESIGN) ----------- */
 @media (max-width: 900px) {
     html, body {
@@ -331,4 +341,13 @@ html, body {
         letter-spacing: 0.2px;
         opacity: 0;
     }
+
+    /* Hotspot Positioning for Mobile */
+    .btn-ferma {top: 34%; left: 5%; width: 90%; height: 7%;}
+    .btn-transport {top: 43%; left: 5%; width: 90%; height: 7%;}
+    .btn-moara {top: 52%; left: 5%; width: 90%; height: 7%;}
+    .btn-brutaria {top: 61%; left: 5%; width: 90%; height: 7%;}
+    .btn-magazin {top: 70%; left: 5%; width: 90%; height: 7%;}
+    .btn-certificari {top: 80%; left: 5%; width: 42%; height: 7%;}
+    .btn-blockchain {top: 80%; left: 53%; width: 42%; height: 7%;}
 }
