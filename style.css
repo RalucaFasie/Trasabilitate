@@ -433,17 +433,6 @@ body, html {
     overflow-y: auto;
 }
 
-.btn-ferma, .btn-transport, .btn-moara, .btn-iot, .btn-magazin {
-    min-width: 35vw;
-    min-height: 10vw;
-    width: 44vw;
-    height: auto;
-    font-size: 1rem;
-    position: static;
-    margin: 8px auto;
-    display: block;
-}
-
 .block-info {
     flex-direction: column;
     gap: 2vw;
