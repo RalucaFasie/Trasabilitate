@@ -42,7 +42,7 @@ html, body {
     border: none !important;
     color: transparent !important;
     opacity: 0 !important;
-    z-index: 9999 !important;
+    z-index: 10;
     cursor: pointer;
 }
 
@@ -167,82 +167,36 @@ html, body {
 
 /* Responsive Design */
 @media (max-width: 900px) {
-    .desktop-image {
-        display: none !important;
-    }
-    
-    .mobile-image {
-        display: block !important;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-    }
-
     html, body {
         margin: 0;
         padding: 0;
+        width: 100%;
         height: 100vh;
         overflow: hidden;
     }
 
-    .btn-ferma {
-        top: 41%;
-        left: 8%;
-        width: 22%;
-        height: 11%;
-    }
-    
-    .btn-transport {
-        top: 41%;
-        left: 30%;
-        width: 22%;
-        height: 11%;
-    }
-    
-    .btn-moara {
-        top: 41%;
-        left: 51%;
-        width: 22%;
-        height: 11%;
-    }
-    
-    .btn-brutaria {
-        top: 41%;
-        left: 73%;
-        width: 22%;
-        height: 11%;
-    }
-    
-    .btn-magazin {
-        top: 55%;
-        left: 73%;
-        width: 22%;
-        height: 11%;
-    }
-    
-    .btn-certificari {
-        top: 80%;
-        left: 14%;
-        width: 31%;
-        height: 12%;
-    }
-    
-    .btn-verificare {
-        top: 80%;
-        left: 55%;
-        width: 31%;
-        height: 12%;
-    }
-    
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-        padding: 20px;
+    .image-desktop { 
+        display: none !important; 
     }
 
-    #modal-title {
-        font-size: 1.4rem;
+    .image-mobile {
+        display: block !important;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
+
+    .btn-ferma       { top: 47%; left: 10%; width: 22%; height: 9%; }
+    .btn-transport   { top: 47%; left: 31%; width: 22%; height: 9%; }
+    .btn-moara       { top: 47%; left: 52%; width: 22%; height: 9%; }
+    .btn-brutaria    { top: 47%; left: 73%; width: 22%; height: 9%; }
+
+    .btn-magazin     { top: 60%; left: 73%; width: 22%; height: 10%; }
+
+    .btn-certificari { top: 78%; left: 14%; width: 35%; height: 12%; }
+    .btn-verificare  { top: 78%; left: 52%; width: 35%; height: 12%; }
 }
