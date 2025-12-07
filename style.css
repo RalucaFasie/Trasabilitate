@@ -4,19 +4,10 @@
     box-sizing: border-box;
 }
 
-body, html {
+html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-y: auto;
-    font-family: Arial, sans-serif;
-}
-
-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -35,14 +26,8 @@ body {
     display: block;
 }
 
-/* Desktop image - show on larger screens */
-.desktop-image {
-    display: block;
-}
-
-/* Mobile image - hide on larger screens */
 .mobile-image {
-    display: none;
+    display: block;
 }
 
 .paine-image {
@@ -51,272 +36,14 @@ body {
     display: block;
 }
 
-button {
-    position: absolute;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    outline: 3px solid rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 14px;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.3);
-    transition: 0.2s ease-in-out;
-}
-
-button:active {
-    transform: scale(0.94);
-    outline: 3px solid rgba(255, 255, 255, 0.85);
-    background: rgba(255, 255, 255, 0.20);
-    border-radius: 16px;
-    box-shadow:
-        0 0 12px rgba(255, 255, 255, 0.5),
-        inset 0 0 10px rgba(0, 0, 0, 0.35);
-    transition: 0.1s ease-in-out;
-}
-
-/* Hotspot buttons - invisible clickable areas */
 .hotspot {
     position: absolute;
-    background: transparent;
-    border: none;
+    background: transparent !important;
+    border: none !important;
+    color: transparent !important;
+    opacity: 0 !important;
+    z-index: 9999 !important;
     cursor: pointer;
-    width: 0;
-    height: 0;
-    padding: 0;
-}
-
-.hotspot:hover {
-    outline: none;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    transform: none;
-}
-
-.hotspot:active {
-    outline: none;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-    transform: none;
-}
-
-/* Visible interactive buttons with text */
-.ui-btn {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.15);
-    border: 2px solid #e4c878;
-    color: #e4c878;
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    backdrop-filter: blur(2px);
-    cursor: pointer;
-    transition: 0.2s ease;
-    font-weight: 500;
-    white-space: nowrap;
-    z-index: 10;
-}
-
-.ui-btn:hover {
-    background: rgba(255, 240, 180, 0.15);
-    box-shadow: 0 0 12px rgba(228, 200, 120, 0.6);
-    outline: none;
-}
-
-.ui-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 14px rgba(228, 200, 120, 0.9);
-    outline: none;
-}
-
-/* Desktop hotspot positions (landscape layout) - invisible clickable areas */
-.desktop-image .hotspot-ferma {
-    top: 28%;
-    left: 8%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-transport {
-    top: 28%;
-    left: 25%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-moara {
-    top: 28%;
-    left: 42%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-iot {
-    top: 28%;
-    left: 59%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-brutaria {
-    top: 38%;
-    left: 68%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-magazin {
-    top: 28%;
-    left: 76%;
-    width: 14%;
-    height: 20%;
-}
-
-.desktop-image .hotspot-certificari {
-    top: 90%;
-    left: 18%;
-    width: 20%;
-    height: 8%;
-}
-
-/* Desktop visible button positions - positioned over drawn elements */
-.desktop-image .ui-btn-ferma {
-    top: 64%;
-    left: 6%;
-}
-
-.desktop-image .ui-btn-transport {
-    top: 38%;
-    left: 22%;
-}
-
-.desktop-image .ui-btn-moara {
-    top: 38%;
-    left: 45%;
-}
-
-.desktop-image .ui-btn-brutaria {
-    top: 38%;
-    left: 68%;
-}
-
-.desktop-image .ui-btn-magazin {
-    top: 64%;
-    left: 84%;
-}
-
-.desktop-image .ui-btn-certificari {
-    bottom: 10%;
-    left: 18%;
-    padding: 10px 24px;
-    font-size: 1.1rem;
-}
-
-.desktop-image .ui-btn-verificare {
-    bottom: 10%;
-    right: 18%;
-    padding: 10px 24px;
-    font-size: 1.1rem;
-}
-
-/* Mobile hotspot positions (vertical layout) - invisible clickable areas */
-.mobile-image .hotspot-ferma {
-    top: 15%;
-    left: 20%;
-    width: 60%;
-    height: 11%;
-}
-
-.mobile-image .hotspot-transport {
-    top: 28%;
-    left: 20%;
-    width: 60%;
-    height: 11%;
-}
-
-.mobile-image .hotspot-moara {
-    top: 41%;
-    left: 20%;
-    width: 60%;
-    height: 11%;
-}
-
-.mobile-image .hotspot-iot {
-    top: 54%;
-    left: 20%;
-    width: 60%;
-    height: 11%;
-}
-
-.mobile-image .hotspot-brutaria {
-    top: 80%;
-    left: 20%;
-    width: 60%;
-    height: 8%;
-}
-
-.mobile-image .hotspot-magazin {
-    top: 67%;
-    left: 20%;
-    width: 60%;
-    height: 11%;
-}
-
-.mobile-image .hotspot-certificari {
-    top: 90%;
-    left: 20%;
-    width: 60%;
-    height: 8%;
-}
-
-/* Mobile visible button positions */
-.mobile-image .ui-btn-ferma {
-    top: 16%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mobile-image .ui-btn-transport {
-    top: 29%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mobile-image .ui-btn-moara {
-    top: 42%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mobile-image .ui-btn-brutaria {
-    top: 55%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mobile-image .ui-btn-magazin {
-    top: 68%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mobile-image .ui-btn-certificari {
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-}
-
-.mobile-image .ui-btn-verificare {
-    bottom: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
 }
 
 /* Modal Styles */
@@ -439,25 +166,74 @@ button:active {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    /* Hide desktop image, show mobile image */
+@media (max-width: 900px) {
     .desktop-image {
-        display: none;
+        display: none !important;
     }
     
     .mobile-image {
-        display: block;
-    }
-    
-    .interface {
-        width: 100vw;
-        min-height: 100vh;
-        height: auto;
-    }
-    
-    .image-wrapper {
+        display: block !important;
         width: 100%;
-        max-width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .btn-ferma {
+        top: 41%;
+        left: 8%;
+        width: 22%;
+        height: 11%;
+    }
+    
+    .btn-transport {
+        top: 41%;
+        left: 30%;
+        width: 22%;
+        height: 11%;
+    }
+    
+    .btn-moara {
+        top: 41%;
+        left: 51%;
+        width: 22%;
+        height: 11%;
+    }
+    
+    .btn-brutaria {
+        top: 41%;
+        left: 73%;
+        width: 22%;
+        height: 11%;
+    }
+    
+    .btn-magazin {
+        top: 55%;
+        left: 73%;
+        width: 22%;
+        height: 11%;
+    }
+    
+    .btn-certificari {
+        top: 80%;
+        left: 14%;
+        width: 31%;
+        height: 12%;
+    }
+    
+    .btn-verificare {
+        top: 80%;
+        left: 55%;
+        width: 31%;
+        height: 12%;
     }
     
     .modal-content {
@@ -468,10 +244,5 @@ button:active {
 
     #modal-title {
         font-size: 1.4rem;
-    }
-    
-    .ui-btn {
-        font-size: 0.9rem;
-        padding: 6px 10px;
     }
 }

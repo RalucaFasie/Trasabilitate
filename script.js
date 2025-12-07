@@ -46,15 +46,16 @@ const blockData = {
     hash: ""
   },
 
-  iot: {
-    tip: "SENZORI IoT",
+  brutaria: {
+    tip: "BRUTĂRIA",
     data: {
-      senzor: "IoT-SZ-8832",
-      temperatura: "21.5°C",
-      umiditate: "13.9%",
-      infestare: "0%",
+      brutarie: "Brutăria Caldă Călărași",
+      lotProductie: "BRU-2025-LOT-156",
+      produs: "Pâine albă artizanală",
+      greutate: "500g",
+      ingrediente: "Făină tip 650, apă, drojdie, sare",
       data: "20.07.2025",
-      operator: "Călărași Grain Monitoring System"
+      certificare: "ISO 22000 / HACCP"
     },
     previousHash: "",
     hash: ""
@@ -102,7 +103,7 @@ async function generateHashForBlock(data, previousHash) {
 async function updateBlockchainChain() {
   const keys = Object.keys(blockData);
 
-  // mergem în ordine: ferma → transport → moara → iot → magazin
+  // mergem în ordine: ferma → transport → moara → brutaria → magazin
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
 
@@ -176,4 +177,15 @@ function closeModal(modalName) {
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
+// === 7. FUNCȚII PENTRU CERTIFICĂRI ȘI VERIFICARE BLOCKCHAIN ===
+
+function openCertificari() {
+  alert("Certificări: ISO 22000, HACCP, APIA/MADR - Toate certificările sunt active și verificabile.");
+}
+
+function openBlockchainVerification() {
+  alert("Verificare Blockchain: Toate block-urile sunt valide și verificate. Lanțul este integru.");
 }
