@@ -1,18 +1,21 @@
-/* style.css — updated to show full paine.png on mobile and enable scrolling
-   Commit message: style.css: show full paine.png on mobile and enable scrolling
-*/
+/* style.css — updated to show full paine.png on mobile and enable scrolling */
 
-/* Global rules to ensure scrolling on mobile */
+/* ========================================
+   1. GLOBAL RULES - Ensure scrolling on mobile
+   ======================================== */
 body, html {
     margin: 0;
     padding: 0;
     overflow-y: auto;
+    font-family: Arial, sans-serif;
 }
 
-/* Interface background: show full image on mobile (contain) and allow scrolling */
+/* ========================================
+   2. INTERFACE - Background image container
+   ======================================== */
 .interface {
-    background-image: url("assets/paine.png");
-    background-size: contain;       /* nu cover */
+    background-image: url("assets/Paine.png");
+    background-size: contain;       /* nu cover - ensures full image is visible */
     background-repeat: no-repeat;
     background-position: top center;
     width: 100vw;
@@ -20,8 +23,184 @@ body, html {
     position: relative;
 }
 
-/* ------------------------------------------------------------------
-   Note: Removed any overflow: hidden declarations to ensure scrolling.
-   If you need other existing stylesheet rules restored, tell me which
-   sections to keep and I will merge them without overflow: hidden.
-   ------------------------------------------------------------------ */
+/* ========================================
+   3. BUTTON STYLES - Positioned on the interface
+   ======================================== */
+.btn-ferma,
+.btn-transport,
+.btn-moara,
+.btn-iot,
+.btn-magazin {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: rgba(0, 123, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0;
+}
+
+.btn-ferma:hover,
+.btn-transport:hover,
+.btn-moara:hover,
+.btn-iot:hover,
+.btn-magazin:hover {
+    background-color: rgba(0, 123, 255, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Position buttons based on blockchain flow in the image */
+.btn-ferma {
+    top: 20%;
+    left: 15%;
+}
+
+.btn-transport {
+    top: 35%;
+    left: 35%;
+}
+
+.btn-moara {
+    top: 50%;
+    left: 50%;
+}
+
+.btn-iot {
+    top: 65%;
+    left: 65%;
+}
+
+.btn-magazin {
+    top: 80%;
+    left: 80%;
+}
+
+/* Mobile responsive button positioning */
+@media (max-width: 768px) {
+    .btn-ferma,
+    .btn-transport,
+    .btn-moara,
+    .btn-iot,
+    .btn-magazin {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ========================================
+   4. MODAL STYLES - Popup windows for blockchain data
+   ======================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* NOTE: NO overflow: hidden here - allows scrolling */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid #888;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;  /* Allow scrolling within modal if content is long */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* ========================================
+   5. BLOCK INFO DISPLAY
+   ======================================== */
+.block-info {
+    margin-top: 20px;
+}
+
+.info-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+.info-section h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 18px;
+}
+
+.hash-display,
+.data-display {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.data-display p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.data-display b {
+    color: #333;
+}
+
+/* ========================================
+   6. MODAL HEADER
+   ======================================== */
+.modal-content h2 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 24px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* ========================================
+   7. MOBILE RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+        max-height: 85vh;
+    }
+
+    .info-section h3 {
+        font-size: 16px;
+    }
+
+    .hash-display,
+    .data-display {
+        font-size: 12px;
+    }
+}
