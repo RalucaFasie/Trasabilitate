@@ -295,8 +295,7 @@ body {
         font-size: 0.75rem;
         padding: 10px;
         overflow-wrap: break-word;
-        word-wrap: break-word;
-        word-break: break-all;
+        word-break: break-word;
     }
     
     .data-display {
@@ -389,6 +388,8 @@ body {
         font-size: 0.7rem;
         padding: 8px;
         line-height: 1.4;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     
     .data-display {
