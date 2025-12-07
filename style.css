@@ -41,84 +41,57 @@ main {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.interface {
-    background-image: url("assets/lant_trasabilitate.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 1024px;
-    position: relative;
+.blockchain-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.block-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 30px;
     width: 100%;
-}
-
-.btn-ferma,
-.btn-transport,
-.btn-moara,
-.btn-iot,
-.btn-magazin {
-    position: absolute;
-    background: transparent;
-    border: none;
+    max-width: 400px;
+    text-align: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    color: white;
 }
 
-.btn-ferma {
-    top: 160px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+.block-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
 }
 
-.btn-transport {
-    top: 290px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+.block-card:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
-.btn-moara {
-    top: 420px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+.block-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
-.btn-iot {
-    top: 550px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+.block-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-.btn-magazin {
-    top: 680px;
-    left: 620px;
-    width: 260px;
-    height: 90px;
+.block-card p {
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-.btn-ferma:hover,
-.btn-transport:hover,
-.btn-moara:hover,
-.btn-iot:hover,
-.btn-magazin:hover {
-    outline: 3px solid white;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    border-radius: 14px;
-}
-
-.btn-ferma:active,
-.btn-transport:active,
-.btn-moara:active,
-.btn-iot:active,
-.btn-magazin:active {
-    transform: scale(0.94);
-    outline: 3px solid white;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
-    transition: all 0.1s ease;
+.connector {
+    font-size: 2rem;
+    color: #667eea;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 /* Modal Styles */
@@ -254,18 +227,26 @@ main {
         padding: 20px;
     }
 
-    .interface {
-        height: auto;
-        min-height: 500px;
+    .blockchain-container {
+        padding: 10px 0;
     }
 
-    .btn-ferma,
-    .btn-transport,
-    .btn-moara,
-    .btn-iot,
-    .btn-magazin {
-        left: 50%;
-        transform: translateX(-50%);
+    .block-card {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    .block-icon {
+        font-size: 2.5rem;
+    }
+
+    .block-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .connector {
+        font-size: 1.5rem;
+        margin: 5px 0;
     }
 
     .modal-content {

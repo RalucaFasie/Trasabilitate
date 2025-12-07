@@ -14,12 +14,44 @@
         </header>
 
         <main>
-            <div class="interface">
-                <button class="btn-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
-                <button class="btn-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
-                <button class="btn-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
-                <button class="btn-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
-                <button class="btn-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
+            <div class="blockchain-container">
+                <div class="block-card" onclick="openBlock('ferma')" role="button" tabindex="0" aria-label="Ferma - Vezi detaliile blocului fermă">
+                    <div class="block-icon">🌾</div>
+                    <h3>FERMĂ</h3>
+                    <p>Producător agricol</p>
+                </div>
+                
+                <div class="connector">→</div>
+                
+                <div class="block-card" onclick="openBlock('transport')" role="button" tabindex="0" aria-label="Transport - Vezi detaliile blocului de transport">
+                    <div class="block-icon">🚛</div>
+                    <h3>TRANSPORT</h3>
+                    <p>Logistică</p>
+                </div>
+                
+                <div class="connector">→</div>
+                
+                <div class="block-card" onclick="openBlock('moara')" role="button" tabindex="0" aria-label="Moară - Vezi detaliile blocului de procesare">
+                    <div class="block-icon">⚙️</div>
+                    <h3>MOARĂ</h3>
+                    <p>Procesare</p>
+                </div>
+                
+                <div class="connector">→</div>
+                
+                <div class="block-card" onclick="openBlock('iot')" role="button" tabindex="0" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare">
+                    <div class="block-icon">📡</div>
+                    <h3>SENZORI IoT</h3>
+                    <p>Monitorizare</p>
+                </div>
+                
+                <div class="connector">→</div>
+                
+                <div class="block-card" onclick="openBlock('magazin')" role="button" tabindex="0" aria-label="Magazin - Vezi detaliile blocului final">
+                    <div class="block-icon">🏪</div>
+                    <h3>MAGAZIN</h3>
+                    <p>Distribuție finală</p>
+                </div>
             </div>
         </main>
     </div>
