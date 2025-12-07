@@ -179,7 +179,6 @@ function capitalize(str) {
 }
 
 
-
 // === 7. SUPORT TASTATURĂ PENTRU ACCESIBILITATE ===
 
 function handleKeyPress(event, blockName) {
