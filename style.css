@@ -165,38 +165,16 @@ html, body {
     font-weight: 600;
 }
 
-/* Responsive Design */
+/* ----------- LAYOUT ADAPTATIV PENTRU TOATE TELEFOANELE ----------- */
 @media (max-width: 900px) {
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .image-desktop { 
-        display: none !important; 
-    }
-
-    .image-mobile {
-        display: block !important;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    .btn-ferma       { top: 47%; left: 10%; width: 22%; height: 9%; }
-    .btn-transport   { top: 47%; left: 31%; width: 22%; height: 9%; }
-    .btn-moara       { top: 47%; left: 52%; width: 22%; height: 9%; }
-    .btn-brutaria    { top: 47%; left: 73%; width: 22%; height: 9%; }
-
-    .btn-magazin     { top: 60%; left: 73%; width: 22%; height: 10%; }
-
-    .btn-certificari { top: 78%; left: 14%; width: 35%; height: 12%; }
-    .btn-verificare  { top: 78%; left: 52%; width: 35%; height: 12%; }
+    html, body {margin: 0; padding: 0; width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto;}
+    .image-mobile {display: block !important; width: 100vw; height: auto; min-height: 100vh; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1;}
+    .hotspot {position: absolute; background: transparent !important; border: none !important; opacity: 0 !important; z-index: 10; cursor: pointer;}
+    .btn-ferma {top: 28%; left: 5%; width: 90%; height: 7%;}
+    .btn-transport {top: 37%; left: 5%; width: 90%; height: 7%;}
+    .btn-moara {top: 46%; left: 5%; width: 90%; height: 7%;}
+    .btn-brutaria {top: 55%; left: 5%; width: 90%; height: 7%;}
+    .btn-magazin {top: 64%; left: 5%; width: 90%; height: 7%;}
+    .btn-certificari {top: 74%; left: 5%; width: 42%; height: 7%;}
+    .btn-blockchain {top: 74%; left: 53%; width: 42%; height: 7%;}
 }
