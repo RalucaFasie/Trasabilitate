@@ -279,8 +279,6 @@ html, body {
         display: none !important;
     }
 
-
-
     /* Full Screen Background - DEPRECATED, replaced by SVG */
     .mobile-background {
         display: none !important;
@@ -290,8 +288,6 @@ html, body {
     .mobile-buttons {
         display: none !important;
     }
-
-
 
     /* Old Hotspot Positioning for Mobile - DISABLED, replaced by SVG */
     /* .btn-ferma {top: 34%; left: 5%; width: 90%; height: 7%;}
