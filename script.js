@@ -77,7 +77,7 @@ function openModal(stage) {
     
     modalTitle.textContent = block.title;
     previousHashDiv.textContent = block.previousHash;
-    blockDataDiv.innerHTML = `<p><em>${block.data}</em></p>`;
+    blockDataDiv.textContent = block.data;
     currentHashDiv.textContent = block.currentHash;
     
     modal.style.display = 'block';
