@@ -249,12 +249,12 @@ html, body {
         margin-top: 80px;
     }
 
-    /* Main Buttons */
+    /* Main Buttons - Hidden but positioned */
     .mobile-btn {
         width: 100%;
         max-width: 600px;
         min-height: 70px;
-        background: rgba(245, 240, 225, 0.98);
+        background: transparent;
         border: none;
         border-radius: 40px;
         display: flex;
@@ -262,19 +262,19 @@ html, body {
         padding: 15px 30px;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        opacity: 0;
     }
 
     .mobile-btn:active {
         transform: scale(0.97);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     }
 
     .btn-icon {
         font-size: 2.2rem;
         margin-right: 20px;
         flex-shrink: 0;
+        opacity: 0;
     }
 
     .btn-label {
@@ -283,6 +283,7 @@ html, body {
         color: #1a1a1a;
         text-align: left;
         letter-spacing: 0.3px;
+        opacity: 0;
     }
 
     /* Bottom Buttons Container */
@@ -294,11 +295,11 @@ html, body {
         margin-top: 5px;
     }
 
-    /* Small Bottom Buttons */
+    /* Small Bottom Buttons - Hidden but positioned */
     .mobile-btn-small {
         flex: 1;
         min-height: 65px;
-        background: rgba(245, 240, 225, 0.98);
+        background: transparent;
         border: none;
         border-radius: 35px;
         display: flex;
@@ -307,19 +308,19 @@ html, body {
         padding: 12px 18px;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        opacity: 0;
     }
 
     .mobile-btn-small:active {
         transform: scale(0.97);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     }
 
     .btn-icon-small {
         font-size: 1.6rem;
         margin-right: 8px;
         flex-shrink: 0;
+        opacity: 0;
     }
 
     .btn-label-small {
@@ -328,5 +329,6 @@ html, body {
         color: #1a1a1a;
         text-align: center;
         letter-spacing: 0.2px;
+        opacity: 0;
     }
 }
