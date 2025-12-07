@@ -6,50 +6,16 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    text-align: center;
-    color: white;
-    margin-bottom: 50px;
-    padding: 30px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-main {
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .interface {
     background-image: url("assets/Paine.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    width: 100%;
-    max-width: 1152px;
-    height: 768px;
-    margin: 0 auto;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
     position: relative;
 }
 
@@ -80,38 +46,38 @@ main {
 }
 
 .btn-ferma {
-    top: 55%;
-    left: 12%;
-    width: 12%;
-    height: 16%;
+    top: 32%;
+    left: 10%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-transport {
-    top: 42%;
-    left: 28%;
-    width: 12%;
-    height: 16%;
+    top: 32%;
+    left: 27%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-moara {
-    top: 38%;
+    top: 32%;
     left: 45%;
-    width: 12%;
-    height: 16%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-iot {
-    top: 48%;
+    top: 32%;
     left: 62%;
-    width: 12%;
-    height: 16%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-magazin {
-    top: 58%;
-    left: 78%;
-    width: 12%;
-    height: 16%;
+    top: 32%;
+    left: 79%;
+    width: 15%;
+    height: 13%;
 }
 
 /* Modal Styles */
@@ -235,32 +201,6 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    .interface {
-        height: auto;
-        min-height: 500px;
-    }
-
-    .btn-ferma,
-    .btn-transport,
-    .btn-moara,
-    .btn-iot,
-    .btn-magazin {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
     .modal-content {
         width: 95%;
         margin: 10% auto;
