@@ -1,0 +1,27 @@
+/* style.css — updated to show full paine.png on mobile and enable scrolling
+   Commit message: style.css: show full paine.png on mobile and enable scrolling
+*/
+
+/* Global rules to ensure scrolling on mobile */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* Interface background: show full image on mobile (contain) and allow scrolling */
+.interface {
+    background-image: url("assets/paine.png");
+    background-size: contain;       /* nu cover */
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ------------------------------------------------------------------
+   Note: Removed any overflow: hidden declarations to ensure scrolling.
+   If you need other existing stylesheet rules restored, tell me which
+   sections to keep and I will merge them without overflow: hidden.
+   ------------------------------------------------------------------ */
