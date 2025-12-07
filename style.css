@@ -23,7 +23,8 @@ html, body {
 /* Hide mobile elements on desktop */
 .mobile-header,
 .mobile-background,
-.mobile-buttons {
+.mobile-buttons,
+.mobile-shell {
     display: none;
 }
 
@@ -177,6 +178,46 @@ html, body {
         overflow: hidden;
     }
 
+    /* Disable old CSS hotspots on mobile */
+    .hotspot {
+        display: none !important;
+    }
+
+    /* SVG Click-map Structure */
+    .mobile-shell {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    .mobile-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .mobile-map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobile-map rect {
+        fill: transparent;
+        stroke: none;
+        cursor: pointer;
+    }
+
     /* Mobile Header with Title and QR Code */
     .mobile-header {
         display: flex;
@@ -217,33 +258,9 @@ html, body {
         padding: 2px;
     }
 
-    /* Full Screen Background */
+    /* Full Screen Background - DEPRECATED, replaced by SVG */
     .mobile-background {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: url('assets/mobile.png');
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        z-index: 1;
-    }
-    
-    .mobile-background::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, 
-            rgba(250, 248, 240, 0.3) 0%, 
-            rgba(245, 240, 225, 0.2) 50%,
-            rgba(200, 170, 120, 0.3) 100%);
-        z-index: 1;
+        display: none !important;
     }
 
     /* Buttons Container */
@@ -342,12 +359,12 @@ html, body {
         opacity: 0;
     }
 
-    /* Hotspot Positioning for Mobile */
-    .btn-ferma {top: 34%; left: 5%; width: 90%; height: 7%;}
+    /* Old Hotspot Positioning for Mobile - DISABLED, replaced by SVG */
+    /* .btn-ferma {top: 34%; left: 5%; width: 90%; height: 7%;}
     .btn-transport {top: 43%; left: 5%; width: 90%; height: 7%;}
     .btn-moara {top: 52%; left: 5%; width: 90%; height: 7%;}
     .btn-brutaria {top: 61%; left: 5%; width: 90%; height: 7%;}
     .btn-magazin {top: 70%; left: 5%; width: 90%; height: 7%;}
     .btn-certificari {top: 80%; left: 5%; width: 42%; height: 7%;}
-    .btn-blockchain {top: 80%; left: 53%; width: 42%; height: 7%;}
+    .btn-blockchain {top: 80%; left: 53%; width: 42%; height: 7%;} */
 }

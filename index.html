@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <!-- Invisible Hotspots -->
+        <!-- Invisible Hotspots (Desktop only) -->
         <div class="hotspot btn-ferma" onclick="openBlock('ferma')"></div>
         <div class="hotspot btn-transport" onclick="openBlock('transport')"></div>
         <div class="hotspot btn-moara" onclick="openBlock('moara')"></div>
@@ -23,7 +23,21 @@
         <div class="hotspot btn-certificari" onclick="openCertificari()"></div>
         <div class="hotspot btn-blockchain" onclick="openBlockchainVerification()"></div>
 
-        <!-- Background Image (mobile only) -->
+        <!-- Mobile SVG Click-map -->
+        <div class="mobile-shell">
+            <img src="assets/mobile.png" alt="Mobile Background" class="mobile-bg">
+            <svg class="mobile-map" viewBox="0 0 1024 1536" xmlns="http://www.w3.org/2000/svg">
+                <rect class="area-ferma" x="51" y="522" width="922" height="107" onclick="openBlock('ferma')"/>
+                <rect class="area-transport" x="51" y="660" width="922" height="107" onclick="openBlock('transport')"/>
+                <rect class="area-moara" x="51" y="799" width="922" height="107" onclick="openBlock('moara')"/>
+                <rect class="area-brutaria" x="51" y="937" width="922" height="107" onclick="openBlock('brutaria')"/>
+                <rect class="area-magazin" x="51" y="1075" width="922" height="107" onclick="openBlock('magazin')"/>
+                <rect class="area-certificari" x="51" y="1229" width="430" height="107" onclick="openCertificari()"/>
+                <rect class="area-blockchain" x="543" y="1229" width="430" height="107" onclick="openBlockchainVerification()"/>
+            </svg>
+        </div>
+
+        <!-- Background Image (mobile only - DEPRECATED, replaced by SVG) -->
         <div class="mobile-background"></div>
 
         <!-- Buttons Container (mobile only) -->
