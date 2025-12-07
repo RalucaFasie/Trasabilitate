@@ -1,3 +1,3 @@
 # Trasabilitate
 
-<!-- Branch: fix/pane-mobile-overflow -->
+Aplicație web pentru trasabilitate blockchain în lanțul alimentar al pâinii.
