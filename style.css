@@ -39,7 +39,9 @@ body, html {
     background-color: rgba(0, 123, 255, 0.7);
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0;
+    /* Hide text visually but keep it accessible for screen readers */
+    text-indent: -9999px;
+    overflow: hidden;
 }
 
 .btn-ferma:hover,
