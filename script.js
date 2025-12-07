@@ -177,3 +177,14 @@ function closeModal(modalName) {
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+
+
+// === 7. SUPORT TASTATURĂ PENTRU ACCESIBILITATE ===
+
+function handleKeyPress(event, blockName) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openBlock(blockName);
+  }
+}
