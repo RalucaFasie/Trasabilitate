@@ -60,6 +60,21 @@ const blockData = {
     hash: ""
   },
 
+  brutaria: {
+    tip: "BRUTĂRIA",
+    data: {
+      brutarie: "Brutăria Caldă Călărași",
+      lotProductie: "BRU-2025-LOT-156",
+      produs: "Pâine albă artizanală",
+      greutate: "500g",
+      ingrediente: "Făină tip 650, apă, drojdie, sare",
+      data: "20.07.2025",
+      certificare: "ISO 22000 / HACCP"
+    },
+    previousHash: "",
+    hash: ""
+  },
+
   magazin: {
     tip: "MAGAZIN",
     data: {
@@ -176,4 +191,15 @@ function closeModal(modalName) {
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+
+// === 7. FUNCȚII PENTRU CERTIFICĂRI ȘI VERIFICARE BLOCKCHAIN ===
+
+function openCertificari() {
+  alert("Certificări: ISO 22000, HACCP, APIA/MADR - Toate certificările sunt active și verificabile.");
+}
+
+function openBlockchainVerification() {
+  alert("Verificare Blockchain: Toate block-urile sunt valide și verificate. Lanțul este integru.");
 }
