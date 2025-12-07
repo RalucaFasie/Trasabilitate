@@ -404,3 +404,66 @@ body {
         line-height: 1.4;
     }
 }
+
+/* Reguli universale pentru responsive */
+body, html {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.interface {
+    min-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    width: 98vw;
+    max-width: 500px;
+    min-width: unset;
+    max-height: 90vh;
+    margin: 2vh auto;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.btn-ferma, .btn-transport, .btn-moara, .btn-iot, .btn-magazin {
+    min-width: 35vw;
+    min-height: 10vw;
+    width: 44vw;
+    height: auto;
+    font-size: 1rem;
+    position: static;
+    margin: 8px auto;
+    display: block;
+}
+
+.block-info {
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .interface {
+        padding: 0 2vw;
+        background-size: cover;
+        background-position: center;
+    }
+    .modal-content {
+        width: 97vw;
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .btn-ferma, .btn-transport, .btn-moara, .btn-iot, .btn-magazin {
+        width: 90vw;
+        min-width: unset;
+        margin: 10px auto;
+        font-size: 1.1rem;
+    }
+}
