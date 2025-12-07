@@ -17,7 +17,12 @@ html, body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background-image: url('assets/paine.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f5f5;
 }
 
 /* Hide mobile elements on desktop */
@@ -155,6 +160,57 @@ html, body {
     border: none !important;
     z-index: 10;
     cursor: pointer;
+}
+
+/* Desktop Hotspot Positioning */
+/* Based on paine.png (1536x1024) - positions are percentages for responsive design */
+.btn-ferma {
+    left: 12%;
+    top: 38%;
+    width: 12%;
+    height: 18%;
+}
+
+.btn-transport {
+    left: 24%;
+    top: 25%;
+    width: 12%;
+    height: 18%;
+}
+
+.btn-moara {
+    left: 40%;
+    top: 15%;
+    width: 12%;
+    height: 18%;
+}
+
+.btn-brutaria {
+    left: 56%;
+    top: 25%;
+    width: 12%;
+    height: 18%;
+}
+
+.btn-magazin {
+    left: 68%;
+    top: 38%;
+    width: 12%;
+    height: 18%;
+}
+
+.btn-certificari {
+    left: 10%;
+    bottom: 12%;
+    width: 25%;
+    height: 12%;
+}
+
+.btn-blockchain {
+    right: 10%;
+    bottom: 12%;
+    width: 25%;
+    height: 12%;
 }
 
 /* ----------- MOBILE LAYOUT (FULL SCREEN DESIGN) ----------- */
