@@ -17,9 +17,9 @@ body {
 
 .interface {
     background-image: url("assets/Paine.png");
-    background-size: contain;       /* nu cover */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     width: 100vw;
     min-height: 100vh;
     position: relative;
@@ -221,17 +221,16 @@ body {
 @media (max-width: 900px) {
     .interface {
         width: 100vw;
-        min-height: 100vh;
+        aspect-ratio: 16/9;
+        min-height: auto;
         background-size: contain;
         background-position: top center;
         padding-top: env(safe-area-inset-top);
         padding-bottom: env(safe-area-inset-bottom);
     }
-    .btn-ferma       { top: 28%; left: 7%;  width: 22%; height: 12%; }
-    .btn-transport   { top: 28%; left: 30%; width: 22%; height: 12%; }
-    .btn-moara       { top: 28%; left: 53%; width: 22%; height: 12%; }
-    .btn-brutaria    { top: 28%; left: 76%; width: 22%; height: 12%; }
-    .btn-magazin     { top: 46%; left: 36%; width: 28%; height: 14%; }
-    .btn-certificari { top: 72%; left: 10%; width: 36%; height: 14%; }
-    .btn-verificare  { top: 72%; left: 54%; width: 36%; height: 14%; }
+    .btn-ferma       { top: 32%; left: 10%; width: 15%; height: 13%; }
+    .btn-transport   { top: 32%; left: 27%; width: 15%; height: 13%; }
+    .btn-moara       { top: 32%; left: 45%; width: 15%; height: 13%; }
+    .btn-iot         { top: 32%; left: 62%; width: 15%; height: 13%; }
+    .btn-magazin     { top: 32%; left: 79%; width: 15%; height: 13%; }
 }
