@@ -8,15 +8,53 @@
 </head>
 <body>
     <div class="interface">
-        <div class="image-wrapper image-mobile">
-            <img src="assets/mobile.png" alt="Trasabilitate Blockchain" class="paine-image">
-            <button class="hotspot btn-ferma" onclick="openBlock('ferma')"></button>
-            <button class="hotspot btn-transport" onclick="openBlock('transport')"></button>
-            <button class="hotspot btn-moara" onclick="openBlock('moara')"></button>
-            <button class="hotspot btn-brutaria" onclick="openBlock('brutaria')"></button>
-            <button class="hotspot btn-magazin" onclick="openBlock('magazin')"></button>
-            <button class="hotspot btn-certificari" onclick="openCertificari()"></button>
-            <button class="hotspot btn-blockchain" onclick="openBlockchainVerification()"></button>
+        <!-- Title and QR Code (mobile only) -->
+        <div class="mobile-header">
+            <h1 class="mobile-title">
+                Trasabilitate pâine<br>
+                LANȚ ALIMENTAR DIGITAL
+            </h1>
+            <div class="mobile-qr">
+                <img src="assets/qr-code.svg" alt="QR Code">
+            </div>
+        </div>
+
+        <!-- Background Image (mobile only) -->
+        <div class="mobile-background"></div>
+
+        <!-- Buttons Container (mobile only) -->
+        <div class="mobile-buttons">
+            <button class="mobile-btn" onclick="openBlock('ferma')">
+                <span class="btn-icon">🌾</span>
+                <span class="btn-label">FERMĂ</span>
+            </button>
+            <button class="mobile-btn" onclick="openBlock('transport')">
+                <span class="btn-icon">🚚</span>
+                <span class="btn-label">TRANSPORT ȘI LOGISTICĂ</span>
+            </button>
+            <button class="mobile-btn" onclick="openBlock('moara')">
+                <span class="btn-icon">🏭</span>
+                <span class="btn-label">MOARĂ ȘI PROCESARE</span>
+            </button>
+            <button class="mobile-btn" onclick="openBlock('brutaria')">
+                <span class="btn-icon">🍞</span>
+                <span class="btn-label">BRUTĂRIE</span>
+            </button>
+            <button class="mobile-btn" onclick="openBlock('magazin')">
+                <span class="btn-icon">🏪</span>
+                <span class="btn-label">MAGAZIN</span>
+            </button>
+            
+            <div class="mobile-bottom-buttons">
+                <button class="mobile-btn-small" onclick="openCertificari()">
+                    <span class="btn-icon-small">🏆</span>
+                    <span class="btn-label-small">CERTIFICATE</span>
+                </button>
+                <button class="mobile-btn-small" onclick="openBlockchainVerification()">
+                    <span class="btn-icon-small">🔗</span>
+                    <span class="btn-label-small">BLOCKCHAIN</span>
+                </button>
+            </div>
         </div>
     </div>
 
