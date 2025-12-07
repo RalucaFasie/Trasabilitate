@@ -187,8 +187,18 @@ main {
     border-radius: 8px;
     min-height: 80px;
     border: 1px solid #e0e0e0;
-    color: #666;
-    font-style: italic;
+    color: #333;
+}
+
+.data-display p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.data-display b {
+    color: #667eea;
+    font-weight: 600;
 }
 
 /* Responsive Design */

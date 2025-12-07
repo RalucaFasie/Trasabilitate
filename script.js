@@ -1,120 +1,176 @@
-// Blockchain structure
-const blockchain = {
-    ferma: {
-        title: "Ferma",
-        previousHash: "0000000000000000000000000000000000000000000000000000000000000000",
-        data: "Date ferma - vor fi completate ulterior",
-        currentHash: null
+// === 1. DATELE LANTULUI BLOCKCHAIN ===
+
+const blockData = {
+  ferma: {
+    tip: "FERMA",
+    data: {
+      producator: "Ferma Agro Prest 2005 SRL",
+      judet: "Călărași",
+      cultura: "Grâu panificație",
+      lot: "2025-CA-GR-004",
+      umiditate: "11.8%",
+      pesticide: "Conform registru fitosanitar 2025",
+      certificare: "APIA / MADR – Certificat lot 004",
     },
-    transport: {
-        title: "Transport & Logistică",
-        previousHash: null,
-        data: "Date transport - vor fi completate ulterior",
-        currentHash: null
+    previousHash: "0000000000000000", // primul block
+    hash: ""
+  },
+
+  transport: {
+    tip: "TRANSPORT & LOGISTICĂ",
+    data: {
+      operator: "TransAgro Călărași",
+      camion: "CL-45-AGRO",
+      tip: "Cereale vrac",
+      greutate: "24.000 kg",
+      data: "18.07.2025",
+      destinatie: "Moara Călărași Nord",
+      documente: "Aviz nr. 2245"
     },
-    moara: {
-        title: "Moară / Procesare",
-        previousHash: null,
-        data: "Date procesare - vor fi completate ulterior",
-        currentHash: null
+    previousHash: "",
+    hash: ""
+  },
+
+  moara: {
+    tip: "MOARĂ / PROCESARE",
+    data: {
+      operator: "Moara Călărași Nord SA",
+      lotProcesare: "MCN-2025-LOT-020",
+      produs: "Făină albă tip 650",
+      randament: "78%",
+      umiditate: "14.2%",
+      data: "19.07.2025",
+      certificare: "ISO 22000 / HACCP"
     },
-    senzori: {
-        title: "Senzori IoT",
-        previousHash: null,
-        data: "Date senzori - vor fi completate ulterior",
-        currentHash: null
+    previousHash: "",
+    hash: ""
+  },
+
+  iot: {
+    tip: "SENZORI IoT",
+    data: {
+      senzor: "IoT-SZ-8832",
+      temperatura: "21.5°C",
+      umiditate: "13.9%",
+      infestare: "0%",
+      data: "20.07.2025",
+      operator: "Călărași Grain Monitoring System"
     },
-    magazin: {
-        title: "Magazin",
-        previousHash: null,
-        data: "Date magazin - vor fi completate ulterior",
-        currentHash: null
-    }
+    previousHash: "",
+    hash: ""
+  },
+
+  magazin: {
+    tip: "MAGAZIN",
+    data: {
+      magazin: "Profi Călărași – Central",
+      produs: "Pâine albă 650",
+      codProdus: "PRF-PAINE-650-2025",
+      ambalare: "20.07.2025",
+      expirare: "22.07.2025",
+      pret: "5.20 lei",
+      certificare: "Trasabilitate Blockchain Activă"
+    },
+    previousHash: "",
+    hash: ""
+  }
 };
 
-// Chain order
-const chainOrder = ["ferma", "transport", "moara", "senzori", "magazin"];
 
-// SHA-256 hash function using Web Crypto API
-async function generateHash(data) {
-    const encoder = new TextEncoder();
-    const dataBuffer = encoder.encode(data);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    return hashHex;
+// === 2. FUNCȚIE UNIVERSALĂ DE GENERARE HASH ===
+
+async function generateHashForBlock(data, previousHash) {
+  let combined = previousHash;
+
+  // concatenăm toate câmpurile block-ului
+  for (const key in data) {
+    combined += data[key];
+  }
+
+  // generăm hash SHA-256 folosind Web Crypto API
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(combined);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  return hash;
 }
 
-// Initialize blockchain hashes
-async function initializeBlockchain() {
-    for (let i = 0; i < chainOrder.length; i++) {
-        const stage = chainOrder[i];
-        const block = blockchain[stage];
-        
-        // Set previous hash from previous block
-        if (i > 0) {
-            const previousStage = chainOrder[i - 1];
-            block.previousHash = blockchain[previousStage].currentHash;
-        }
-        
-        // Generate current hash
-        const hashInput = block.previousHash + block.data;
-        block.currentHash = await generateHash(hashInput);
+
+// === 3. LANT COMPLET: ACTUALIZĂM HASH-URILE ===
+
+async function updateBlockchainChain() {
+  const keys = Object.keys(blockData);
+
+  // mergem în ordine: ferma → transport → moara → iot → magazin
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+
+    if (i === 0) {
+      // primul block (ferma) are previousHash stabilit manual
+      blockData[key].hash = await generateHashForBlock(
+        blockData[key].data,
+        blockData[key].previousHash
+      );
+    } else {
+      // block-urile următoare primesc previousHash din block precedent
+      const prevKey = keys[i - 1];
+      blockData[key].previousHash = blockData[prevKey].hash;
+      blockData[key].hash = await generateHashForBlock(
+        blockData[key].data,
+        blockData[key].previousHash
+      );
     }
+  }
 }
 
-// Modal elements
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const previousHashDiv = document.getElementById('previous-hash');
-const blockDataDiv = document.getElementById('block-data');
-const currentHashDiv = document.getElementById('current-hash');
-const closeBtn = document.querySelector('.close');
-
-// Open modal with block information
-function openModal(stage) {
-    const block = blockchain[stage];
-    
-    modalTitle.textContent = block.title;
-    previousHashDiv.textContent = block.previousHash;
-    blockDataDiv.textContent = block.data;
-    currentHashDiv.textContent = block.currentHash;
-    
-    modal.style.display = 'block';
-}
-
-// Close modal
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-// Event listeners
+// rulăm lanțul o singură dată la început când pagina se încarcă
 document.addEventListener('DOMContentLoaded', async () => {
-    // Initialize blockchain
-    await initializeBlockchain();
-    
-    // Add click event to all stage buttons
-    const stageButtons = document.querySelectorAll('.stage-button');
-    stageButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const stage = button.getAttribute('data-stage');
-            openModal(stage);
-        });
-    });
-    
-    // Close modal events
-    closeBtn.addEventListener('click', closeModal);
-    
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-    
-    // Close on ESC key
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.style.display === 'block') {
-            closeModal();
-        }
-    });
+  await updateBlockchainChain();
 });
+
+
+
+// === 4. DESCHIDEREA FERESTREI (MODAL) ===
+
+function openBlock(blockName) {
+  const block = blockData[blockName];
+
+  // setăm titlul ferestrei
+  document.querySelector(`#modal-${blockName} h2`).innerText = block.tip;
+
+  // afisăm previousHash
+  document.getElementById(`prev-${blockName}`).innerText = block.previousHash;
+
+  // datele efective ale block-ului
+  const detailsContainer = document.getElementById(`details-${blockName}`);
+  detailsContainer.innerHTML = "";
+
+  for (const key in block.data) {
+    const p = document.createElement("p");
+    p.innerHTML = `<b>${capitalize(key)}:</b> ${block.data[key]}`;
+    detailsContainer.appendChild(p);
+  }
+
+  // hash-ul generat
+  document.getElementById(`hash-${blockName}`).innerText = block.hash;
+
+  // afișăm fereastra
+  document.getElementById(`modal-${blockName}`).style.display = "block";
+}
+
+
+
+// === 5. ÎNCHIDEREA MODALULUI ===
+
+function closeModal(modalName) {
+  document.getElementById(modalName).style.display = "none";
+}
+
+
+
+// === 6. FUNCȚIE PENTRU CAPITALIZARE TEXT ===
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}

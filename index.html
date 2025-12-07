@@ -15,27 +15,27 @@
 
         <main>
             <div class="buttons-grid">
-                <button class="stage-button" data-stage="ferma">
+                <button class="stage-button" onclick="openBlock('ferma')">
                     <span class="icon">🚜</span>
                     <span class="label">Ferma</span>
                 </button>
                 
-                <button class="stage-button" data-stage="transport">
+                <button class="stage-button" onclick="openBlock('transport')">
                     <span class="icon">🚚</span>
                     <span class="label">Transport & Logistică</span>
                 </button>
                 
-                <button class="stage-button" data-stage="moara">
+                <button class="stage-button" onclick="openBlock('moara')">
                     <span class="icon">⚙️</span>
                     <span class="label">Moară / Procesare</span>
                 </button>
                 
-                <button class="stage-button" data-stage="senzori">
+                <button class="stage-button" onclick="openBlock('iot')">
                     <span class="icon">📡</span>
                     <span class="label">Senzori IoT</span>
                 </button>
                 
-                <button class="stage-button" data-stage="magazin">
+                <button class="stage-button" onclick="openBlock('magazin')">
                     <span class="icon">🏪</span>
                     <span class="label">Magazin</span>
                 </button>
@@ -43,28 +43,126 @@
         </main>
     </div>
 
-    <!-- Modal -->
-    <div id="modal" class="modal">
+    <!-- Modal Ferma -->
+    <div id="modal-ferma" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-title"></h2>
+            <span class="close" onclick="closeModal('modal-ferma')">&times;</span>
+            <h2></h2>
             
             <div class="block-info">
                 <div class="info-section">
                     <h3>Hash Anterior</h3>
-                    <div id="previous-hash" class="hash-display"></div>
+                    <div id="prev-ferma" class="hash-display"></div>
                 </div>
                 
                 <div class="info-section">
                     <h3>Date Block</h3>
-                    <div id="block-data" class="data-display">
-                        Datele vor fi completate ulterior
-                    </div>
+                    <div id="details-ferma" class="data-display"></div>
                 </div>
                 
                 <div class="info-section">
                     <h3>Hash Curent (SHA-256)</h3>
-                    <div id="current-hash" class="hash-display"></div>
+                    <div id="hash-ferma" class="hash-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Transport -->
+    <div id="modal-transport" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-transport')">&times;</span>
+            <h2></h2>
+            
+            <div class="block-info">
+                <div class="info-section">
+                    <h3>Hash Anterior</h3>
+                    <div id="prev-transport" class="hash-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Date Block</h3>
+                    <div id="details-transport" class="data-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hash Curent (SHA-256)</h3>
+                    <div id="hash-transport" class="hash-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Moara -->
+    <div id="modal-moara" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-moara')">&times;</span>
+            <h2></h2>
+            
+            <div class="block-info">
+                <div class="info-section">
+                    <h3>Hash Anterior</h3>
+                    <div id="prev-moara" class="hash-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Date Block</h3>
+                    <div id="details-moara" class="data-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hash Curent (SHA-256)</h3>
+                    <div id="hash-moara" class="hash-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal IoT -->
+    <div id="modal-iot" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-iot')">&times;</span>
+            <h2></h2>
+            
+            <div class="block-info">
+                <div class="info-section">
+                    <h3>Hash Anterior</h3>
+                    <div id="prev-iot" class="hash-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Date Block</h3>
+                    <div id="details-iot" class="data-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hash Curent (SHA-256)</h3>
+                    <div id="hash-iot" class="hash-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Magazin -->
+    <div id="modal-magazin" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-magazin')">&times;</span>
+            <h2></h2>
+            
+            <div class="block-info">
+                <div class="info-section">
+                    <h3>Hash Anterior</h3>
+                    <div id="prev-magazin" class="hash-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Date Block</h3>
+                    <div id="details-magazin" class="data-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hash Curent (SHA-256)</h3>
+                    <div id="hash-magazin" class="hash-display"></div>
                 </div>
             </div>
         </div>
