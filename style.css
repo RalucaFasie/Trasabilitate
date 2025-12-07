@@ -77,7 +77,37 @@ button:active {
     transition: 0.1s ease-in-out;
 }
 
-/* Desktop button positions (landscape layout) */
+/* Visible interactive buttons with text */
+.ui-btn {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px solid #e4c878;
+    color: #e4c878;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.ui-btn:hover {
+    background: rgba(255, 240, 180, 0.15);
+    box-shadow: 0 0 12px rgba(228, 200, 120, 0.6);
+    outline: none;
+}
+
+.ui-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 14px rgba(228, 200, 120, 0.9);
+    outline: none;
+}
+
+/* Desktop button positions (landscape layout) - invisible hotspot buttons */
 .desktop-image .btn-ferma {
     top: 28%;
     left: 8%;
@@ -113,7 +143,47 @@ button:active {
     height: 20%;
 }
 
-/* Mobile button positions (vertical layout) */
+/* Desktop visible button positions - positioned over drawn elements */
+.desktop-image .ui-btn-ferma {
+    top: 64%;
+    left: 6%;
+}
+
+.desktop-image .ui-btn-transport {
+    top: 38%;
+    left: 22%;
+}
+
+.desktop-image .ui-btn-moara {
+    top: 38%;
+    left: 45%;
+}
+
+.desktop-image .ui-btn-brutaria {
+    top: 38%;
+    left: 68%;
+}
+
+.desktop-image .ui-btn-magazin {
+    top: 64%;
+    left: 84%;
+}
+
+.desktop-image .ui-btn-certificari {
+    bottom: 10%;
+    left: 18%;
+    padding: 10px 24px;
+    font-size: 1.1rem;
+}
+
+.desktop-image .ui-btn-verificare {
+    bottom: 10%;
+    right: 18%;
+    padding: 10px 24px;
+    font-size: 1.1rem;
+}
+
+/* Mobile button positions (vertical layout) - invisible hotspot buttons */
 .mobile-image .btn-ferma {
     top: 15%;
     left: 20%;
@@ -147,6 +217,51 @@ button:active {
     left: 20%;
     width: 60%;
     height: 12%;
+}
+
+/* Mobile visible button positions */
+.mobile-image .ui-btn-ferma {
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-image .ui-btn-transport {
+    top: 29%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-image .ui-btn-moara {
+    top: 42%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-image .ui-btn-brutaria {
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-image .ui-btn-magazin {
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile-image .ui-btn-certificari {
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+}
+
+.mobile-image .ui-btn-verificare {
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
 }
 
 /* Modal Styles */
@@ -298,5 +413,10 @@ button:active {
 
     #modal-title {
         font-size: 1.4rem;
+    }
+    
+    .ui-btn {
+        font-size: 0.9rem;
+        padding: 6px 10px;
     }
 }
