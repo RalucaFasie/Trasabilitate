@@ -46,20 +46,6 @@ const blockData = {
     hash: ""
   },
 
-  iot: {
-    tip: "SENZORI IoT",
-    data: {
-      senzor: "IoT-SZ-8832",
-      temperatura: "21.5°C",
-      umiditate: "13.9%",
-      infestare: "0%",
-      data: "20.07.2025",
-      operator: "Călărași Grain Monitoring System"
-    },
-    previousHash: "",
-    hash: ""
-  },
-
   brutaria: {
     tip: "BRUTĂRIA",
     data: {
@@ -117,7 +103,7 @@ async function generateHashForBlock(data, previousHash) {
 async function updateBlockchainChain() {
   const keys = Object.keys(blockData);
 
-  // mergem în ordine: ferma → transport → moara → iot → magazin
+  // mergem în ordine: ferma → transport → moara → brutaria → magazin
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
 
