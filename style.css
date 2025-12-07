@@ -1,8 +1,9 @@
-/* style.css — updated to show full paine.png on mobile and enable scrolling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* ========================================
-   1. GLOBAL RULES - Ensure scrolling on mobile
-   ======================================== */
 body, html {
     margin: 0;
     padding: 0;
@@ -10,12 +11,13 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-/* ========================================
-   2. INTERFACE - Background image container
-   ======================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .interface {
     background-image: url("assets/Paine.png");
-    background-size: contain;       /* nu cover - ensures full image is visible */
+    background-size: contain;       /* nu cover */
     background-repeat: no-repeat;
     background-position: top center;
     width: 100vw;
@@ -23,78 +25,68 @@ body, html {
     position: relative;
 }
 
-/* ========================================
-   3. BUTTON STYLES - Positioned on the interface
-   ======================================== */
-.btn-ferma,
-.btn-transport,
-.btn-moara,
-.btn-iot,
-.btn-magazin {
+.interface button {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    background-color: rgba(0, 123, 255, 0.7);
+    background: transparent;
+    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    /* Hide text visually but keep it accessible for screen readers */
-    text-indent: -9999px;
-    overflow: hidden;
 }
 
-.btn-ferma:hover,
-.btn-transport:hover,
-.btn-moara:hover,
-.btn-iot:hover,
-.btn-magazin:hover {
-    background-color: rgba(0, 123, 255, 0.9);
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.interface button:hover {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.3);
+    transition: 0.2s ease-in-out;
 }
 
-/* Position buttons based on blockchain flow in the image */
+.interface button:active {
+    transform: scale(0.94);
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.35);
+    transition: 0.1s ease-in-out;
+}
+
 .btn-ferma {
-    top: 20%;
-    left: 15%;
+    top: 32%;
+    left: 10%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-transport {
-    top: 35%;
-    left: 35%;
+    top: 32%;
+    left: 27%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-moara {
-    top: 50%;
-    left: 50%;
+    top: 32%;
+    left: 45%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-iot {
-    top: 65%;
-    left: 65%;
+    top: 32%;
+    left: 62%;
+    width: 15%;
+    height: 13%;
 }
 
 .btn-magazin {
-    top: 80%;
-    left: 80%;
+    top: 32%;
+    left: 79%;
+    width: 15%;
+    height: 13%;
 }
 
-/* Mobile responsive button positioning */
-@media (max-width: 768px) {
-    .btn-ferma,
-    .btn-transport,
-    .btn-moara,
-    .btn-iot,
-    .btn-magazin {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* ========================================
-   4. MODAL STYLES - Popup windows for blockchain data
-   ======================================== */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -103,30 +95,52 @@ body, html {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.6);
-    /* NOTE: NO overflow: hidden here - allows scrolling */
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: white;
     margin: 5% auto;
-    padding: 20px;
-    border: 2px solid #888;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 15px;
     width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;  /* Allow scrolling within modal if content is long */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+    position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .close {
     color: #aaa;
-    float: right;
+    position: absolute;
+    right: 20px;
+    top: 20px;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    line-height: 20px;
+    transition: color 0.3s ease;
 }
 
 .close:hover,
@@ -134,75 +148,90 @@ body, html {
     color: #000;
 }
 
-/* ========================================
-   5. BLOCK INFO DISPLAY
-   ======================================== */
+#modal-title {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
 .block-info {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .info-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    border-left: 4px solid #007bff;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
 
 .info-section h3 {
-    margin-top: 0;
-    color: #007bff;
-    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
-.hash-display,
-.data-display {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    word-wrap: break-word;
+.hash-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
     font-family: 'Courier New', monospace;
-    font-size: 14px;
+    font-size: 0.9rem;
+    word-break: break-all;
+    color: #764ba2;
+    border: 1px solid #e0e0e0;
+}
+
+.data-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 80px;
+    border: 1px solid #e0e0e0;
+    color: #333;
 }
 
 .data-display p {
     margin: 8px 0;
     line-height: 1.6;
+    color: #555;
 }
 
 .data-display b {
-    color: #333;
+    color: #667eea;
+    font-weight: 600;
 }
 
-/* ========================================
-   6. MODAL HEADER
-   ======================================== */
-.modal-content h2 {
-    margin: 0 0 15px 0;
-    color: #333;
-    font-size: 24px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-}
-
-/* ========================================
-   7. MOBILE RESPONSIVE ADJUSTMENTS
-   ======================================== */
+/* Responsive Design */
 @media (max-width: 768px) {
     .modal-content {
         width: 95%;
         margin: 10% auto;
-        padding: 15px;
-        max-height: 85vh;
+        padding: 20px;
     }
 
-    .info-section h3 {
-        font-size: 16px;
+    #modal-title {
+        font-size: 1.4rem;
     }
+}
 
-    .hash-display,
-    .data-display {
-        font-size: 12px;
+@media (max-width: 900px) {
+    .interface {
+        width: 100vw;
+        min-height: 100vh;
+        background-size: contain;
+        background-position: top center;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
     }
+    .btn-ferma       { top: 28%; left: 7%;  width: 22%; height: 12%; }
+    .btn-transport   { top: 28%; left: 30%; width: 22%; height: 12%; }
+    .btn-moara       { top: 28%; left: 53%; width: 22%; height: 12%; }
+    .btn-brutaria    { top: 28%; left: 76%; width: 22%; height: 12%; }
+    .btn-magazin     { top: 46%; left: 36%; width: 28%; height: 14%; }
+    .btn-certificari { top: 72%; left: 10%; width: 36%; height: 14%; }
+    .btn-verificare  { top: 72%; left: 54%; width: 36%; height: 14%; }
 }
