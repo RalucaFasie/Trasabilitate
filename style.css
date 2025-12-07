@@ -229,49 +229,49 @@ button:active {
     top: 15%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 11%;
 }
 
 .mobile-image .hotspot-transport {
     top: 28%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 11%;
 }
 
 .mobile-image .hotspot-moara {
     top: 41%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 11%;
 }
 
 .mobile-image .hotspot-iot {
     top: 54%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 11%;
 }
 
 .mobile-image .hotspot-brutaria {
-    top: 55%;
+    top: 80%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 8%;
 }
 
 .mobile-image .hotspot-magazin {
     top: 67%;
     left: 20%;
     width: 60%;
-    height: 12%;
+    height: 11%;
 }
 
 .mobile-image .hotspot-certificari {
-    top: 92%;
+    top: 90%;
     left: 20%;
     width: 60%;
-    height: 6%;
+    height: 8%;
 }
 
 /* Mobile visible button positions */
