@@ -77,6 +77,33 @@ button:active {
     transition: 0.1s ease-in-out;
 }
 
+/* Hotspot buttons - invisible clickable areas */
+.hotspot {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
+
+.hotspot:hover {
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
+.hotspot:active {
+    outline: none;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+}
+
 /* Visible interactive buttons with text */
 .ui-btn {
     position: absolute;
@@ -107,40 +134,40 @@ button:active {
     outline: none;
 }
 
-/* Desktop button positions (landscape layout) - invisible hotspot buttons */
-.desktop-image .btn-ferma {
+/* Desktop hotspot positions (landscape layout) - invisible clickable areas */
+.desktop-image .hotspot-ferma {
     top: 28%;
     left: 8%;
-    width: 14%;
-    height: 20%;
 }
 
-.desktop-image .btn-transport {
+.desktop-image .hotspot-transport {
     top: 28%;
     left: 25%;
-    width: 14%;
-    height: 20%;
 }
 
-.desktop-image .btn-moara {
+.desktop-image .hotspot-moara {
     top: 28%;
     left: 42%;
-    width: 14%;
-    height: 20%;
 }
 
-.desktop-image .btn-iot {
+.desktop-image .hotspot-iot {
     top: 28%;
     left: 59%;
-    width: 14%;
-    height: 20%;
 }
 
-.desktop-image .btn-magazin {
+.desktop-image .hotspot-brutaria {
+    top: 38%;
+    left: 68%;
+}
+
+.desktop-image .hotspot-magazin {
     top: 28%;
     left: 76%;
-    width: 14%;
-    height: 20%;
+}
+
+.desktop-image .hotspot-certificari {
+    top: 90%;
+    left: 18%;
 }
 
 /* Desktop visible button positions - positioned over drawn elements */
@@ -183,40 +210,40 @@ button:active {
     font-size: 1.1rem;
 }
 
-/* Mobile button positions (vertical layout) - invisible hotspot buttons */
-.mobile-image .btn-ferma {
-    top: 15%;
-    left: 20%;
-    width: 60%;
-    height: 12%;
+/* Mobile hotspot positions (vertical layout) - invisible clickable areas */
+.mobile-image .hotspot-ferma {
+    top: 16%;
+    left: 50%;
 }
 
-.mobile-image .btn-transport {
-    top: 28%;
-    left: 20%;
-    width: 60%;
-    height: 12%;
+.mobile-image .hotspot-transport {
+    top: 29%;
+    left: 50%;
 }
 
-.mobile-image .btn-moara {
-    top: 41%;
-    left: 20%;
-    width: 60%;
-    height: 12%;
+.mobile-image .hotspot-moara {
+    top: 42%;
+    left: 50%;
 }
 
-.mobile-image .btn-iot {
+.mobile-image .hotspot-iot {
     top: 54%;
-    left: 20%;
-    width: 60%;
-    height: 12%;
+    left: 50%;
 }
 
-.mobile-image .btn-magazin {
-    top: 67%;
-    left: 20%;
-    width: 60%;
-    height: 12%;
+.mobile-image .hotspot-brutaria {
+    top: 55%;
+    left: 50%;
+}
+
+.mobile-image .hotspot-magazin {
+    top: 68%;
+    left: 50%;
+}
+
+.mobile-image .hotspot-certificari {
+    top: 92%;
+    left: 50%;
 }
 
 /* Mobile visible button positions */

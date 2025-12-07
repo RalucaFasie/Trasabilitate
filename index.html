@@ -10,12 +10,14 @@
     <div class="interface">
         <div class="image-wrapper desktop-image">
             <img src="assets/paine.png" alt="Trasabilitate Blockchain" class="paine-image">
-            <!-- Invisible buttons for hotspots -->
-            <button class="btn-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
-            <button class="btn-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
-            <button class="btn-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
-            <button class="btn-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
-            <button class="btn-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
+            <!-- Invisible hotspot buttons -->
+            <button class="hotspot hotspot-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
+            <button class="hotspot hotspot-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
+            <button class="hotspot hotspot-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
+            <button class="hotspot hotspot-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
+            <button class="hotspot hotspot-brutaria" onclick="openBlock('brutaria')" aria-label="Brutăria - Vezi detaliile blocului de producție"></button>
+            <button class="hotspot hotspot-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
+            <button class="hotspot hotspot-certificari" onclick="openCertificari()" aria-label="Certificări - Vezi certificările produsului"></button>
             
             <!-- Visible interactive buttons with text -->
             <button class="ui-btn ui-btn-ferma" onclick="openBlock('ferma')">Fermă</button>
@@ -28,12 +30,14 @@
         </div>
         <div class="image-wrapper mobile-image">
             <img src="assets/mobile.png" alt="Trasabilitate Blockchain" class="paine-image">
-            <!-- Invisible buttons for hotspots -->
-            <button class="btn-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
-            <button class="btn-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
-            <button class="btn-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
-            <button class="btn-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
-            <button class="btn-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
+            <!-- Invisible hotspot buttons -->
+            <button class="hotspot hotspot-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
+            <button class="hotspot hotspot-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
+            <button class="hotspot hotspot-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
+            <button class="hotspot hotspot-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
+            <button class="hotspot hotspot-brutaria" onclick="openBlock('brutaria')" aria-label="Brutăria - Vezi detaliile blocului de producție"></button>
+            <button class="hotspot hotspot-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
+            <button class="hotspot hotspot-certificari" onclick="openCertificari()" aria-label="Certificări - Vezi certificările produsului"></button>
             
             <!-- Visible interactive buttons with text -->
             <button class="ui-btn ui-btn-ferma" onclick="openBlock('ferma')">Fermă</button>
