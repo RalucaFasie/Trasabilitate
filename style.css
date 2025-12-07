@@ -254,8 +254,18 @@ main {
         padding: 20px;
     }
 
-    .buttons-grid {
-        grid-template-columns: 1fr;
+    .interface {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .btn-ferma,
+    .btn-transport,
+    .btn-moara,
+    .btn-iot,
+    .btn-magazin {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .modal-content {
