@@ -138,36 +138,50 @@ button:active {
 .desktop-image .hotspot-ferma {
     top: 28%;
     left: 8%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-transport {
     top: 28%;
     left: 25%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-moara {
     top: 28%;
     left: 42%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-iot {
     top: 28%;
     left: 59%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-brutaria {
     top: 38%;
     left: 68%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-magazin {
     top: 28%;
     left: 76%;
+    width: 14%;
+    height: 20%;
 }
 
 .desktop-image .hotspot-certificari {
     top: 90%;
     left: 18%;
+    width: 20%;
+    height: 8%;
 }
 
 /* Desktop visible button positions - positioned over drawn elements */
@@ -212,38 +226,52 @@ button:active {
 
 /* Mobile hotspot positions (vertical layout) - invisible clickable areas */
 .mobile-image .hotspot-ferma {
-    top: 16%;
-    left: 50%;
+    top: 15%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-transport {
-    top: 29%;
-    left: 50%;
+    top: 28%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-moara {
-    top: 42%;
-    left: 50%;
+    top: 41%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-iot {
     top: 54%;
-    left: 50%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-brutaria {
     top: 55%;
-    left: 50%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-magazin {
-    top: 68%;
-    left: 50%;
+    top: 67%;
+    left: 20%;
+    width: 60%;
+    height: 12%;
 }
 
 .mobile-image .hotspot-certificari {
     top: 92%;
-    left: 50%;
+    left: 20%;
+    width: 60%;
+    height: 6%;
 }
 
 /* Mobile visible button positions */
