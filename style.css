@@ -1,18 +1,17 @@
-/* style.css — updated to show full paine.png on mobile and enable scrolling
-   Commit message: style.css: show full paine.png on mobile and enable scrolling
-*/
-
-/* Global rules to ensure scrolling on mobile */
-body, html {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: auto;
 }
 
-/* Interface background: show full image on mobile (contain) and allow scrolling */
 .interface {
-    background-image: url("assets/paine.png");
-    background-size: contain;       /* nu cover */
+    background-image: url("assets/Paine.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
     width: 100vw;
@@ -20,8 +19,448 @@ body, html {
     position: relative;
 }
 
-/* ------------------------------------------------------------------
-   Note: Removed any overflow: hidden declarations to ensure scrolling.
-   If you need other existing stylesheet rules restored, tell me which
-   sections to keep and I will merge them without overflow: hidden.
-   ------------------------------------------------------------------ */
+.interface button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.interface button:hover {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.3);
+    transition: 0.2s ease-in-out;
+}
+
+.interface button:active {
+    transform: scale(0.94);
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.35);
+    transition: 0.1s ease-in-out;
+}
+
+.btn-ferma {
+    top: 32%;
+    left: 10%;
+    width: 15%;
+    height: 13%;
+}
+
+.btn-transport {
+    top: 32%;
+    left: 27%;
+    width: 15%;
+    height: 13%;
+}
+
+.btn-moara {
+    top: 32%;
+    left: 45%;
+    width: 15%;
+    height: 13%;
+}
+
+.btn-iot {
+    top: 32%;
+    left: 62%;
+    width: 15%;
+    height: 13%;
+}
+
+.btn-magazin {
+    top: 32%;
+    left: 79%;
+    width: 15%;
+    height: 13%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+    position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+#modal-title {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.block-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.info-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.hash-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+    color: #764ba2;
+    border: 1px solid #e0e0e0;
+}
+
+.data-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 80px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.data-display p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.data-display b {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+/* Tablets and medium screens */
+@media (max-width: 900px) {
+    .interface {
+        min-height: 100vh;
+        width: 100vw;
+        background-size: contain;
+        background-position: top center;
+    }
+    
+    .btn-ferma {
+        top: 30%;
+        left: 8%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-transport {
+        top: 30%;
+        left: 28%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-moara {
+        top: 30%;
+        left: 48%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-iot {
+        top: 30%;
+        left: 68%;
+        width: 18%;
+        height: 12%;
+    }
+    
+    .btn-magazin {
+        top: 48%;
+        left: 38%;
+        width: 24%;
+        height: 14%;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 8% auto;
+        padding: 25px;
+    }
+    
+    .info-section h3 {
+        font-size: 1rem;
+    }
+    
+    .hash-display,
+    .data-display {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .modal-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .close {
+        font-size: 32px;
+        right: 15px;
+        top: 15px;
+    }
+    
+    .info-section {
+        padding: 15px;
+    }
+    
+    .info-section h3 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .hash-display {
+        font-size: 0.75rem;
+        padding: 10px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .data-display {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    
+    .data-display p {
+        margin: 6px 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .interface button {
+        min-width: 60px;
+        min-height: 40px;
+    }
+    
+    .btn-ferma {
+        top: 28%;
+        left: 5%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-transport {
+        top: 28%;
+        left: 27%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-moara {
+        top: 28%;
+        left: 49%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-iot {
+        top: 28%;
+        left: 71%;
+        width: 20%;
+        height: 10%;
+    }
+    
+    .btn-magazin {
+        top: 45%;
+        left: 35%;
+        width: 30%;
+        height: 12%;
+    }
+    
+    .modal-content {
+        width: 98%;
+        margin: 5% auto;
+        padding: 15px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-right: 30px;
+    }
+    
+    .close {
+        font-size: 28px;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .block-info {
+        gap: 15px;
+    }
+    
+    .info-section {
+        padding: 12px;
+    }
+    
+    .info-section h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .hash-display {
+        font-size: 0.7rem;
+        padding: 8px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .data-display {
+        font-size: 0.8rem;
+        padding: 8px;
+        min-height: 60px;
+    }
+    
+    .data-display p {
+        margin: 5px 0;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}
+
+/* Reguli universale pentru responsive */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.interface {
+    min-width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    width: 98vw;
+    max-width: 500px;
+    min-width: unset;
+    max-height: 90vh;
+    margin: 2vh auto;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.btn-ferma, .btn-transport, .btn-moara, .btn-iot, .btn-magazin {
+    min-width: 35vw;
+    min-height: 10vw;
+    width: 44vw;
+    height: auto;
+    font-size: 1rem;
+    position: static;
+    margin: 8px auto;
+    display: block;
+}
+
+.block-info {
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .interface {
+        padding: 0 2vw;
+        background-size: contain;
+        background-position: top center;
+    }
+    .modal-content {
+        width: 97vw;
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .btn-ferma, .btn-transport, .btn-moara, .btn-iot, .btn-magazin {
+        width: 90vw;
+        min-width: unset;
+        margin: 10px auto;
+        font-size: 1.1rem;
+    }
+}
