@@ -41,45 +41,84 @@ main {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.buttons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+.interface {
+    background-image: url("assets/lant_trasabilitate.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1024px;
+    position: relative;
+    width: 100%;
 }
 
-.stage-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+.btn-ferma,
+.btn-transport,
+.btn-moara,
+.btn-iot,
+.btn-magazin {
+    position: absolute;
+    background: transparent;
     border: none;
-    border-radius: 15px;
-    padding: 30px 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
 }
 
-.stage-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+.btn-ferma {
+    top: 160px;
+    left: 620px;
+    width: 260px;
+    height: 90px;
 }
 
-.stage-button:active {
-    transform: translateY(-2px);
+.btn-transport {
+    top: 290px;
+    left: 620px;
+    width: 260px;
+    height: 90px;
 }
 
-.stage-button .icon {
-    font-size: 2.5rem;
+.btn-moara {
+    top: 420px;
+    left: 620px;
+    width: 260px;
+    height: 90px;
 }
 
-.stage-button .label {
-    font-weight: 600;
+.btn-iot {
+    top: 550px;
+    left: 620px;
+    width: 260px;
+    height: 90px;
+}
+
+.btn-magazin {
+    top: 680px;
+    left: 620px;
+    width: 260px;
+    height: 90px;
+}
+
+.btn-ferma:hover,
+.btn-transport:hover,
+.btn-moara:hover,
+.btn-iot:hover,
+.btn-magazin:hover {
+    outline: 3px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+}
+
+.btn-ferma:active,
+.btn-transport:active,
+.btn-moara:active,
+.btn-iot:active,
+.btn-magazin:active {
+    transform: scale(0.94);
+    outline: 3px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    transition: all 0.1s ease;
 }
 
 /* Modal Styles */
@@ -215,8 +254,18 @@ main {
         padding: 20px;
     }
 
-    .buttons-grid {
-        grid-template-columns: 1fr;
+    .interface {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .btn-ferma,
+    .btn-transport,
+    .btn-moara,
+    .btn-iot,
+    .btn-magazin {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .modal-content {

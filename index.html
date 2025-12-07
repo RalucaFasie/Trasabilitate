@@ -14,31 +14,12 @@
         </header>
 
         <main>
-            <div class="buttons-grid">
-                <button class="stage-button" onclick="openBlock('ferma')">
-                    <span class="icon">🚜</span>
-                    <span class="label">Ferma</span>
-                </button>
-                
-                <button class="stage-button" onclick="openBlock('transport')">
-                    <span class="icon">🚚</span>
-                    <span class="label">Transport & Logistică</span>
-                </button>
-                
-                <button class="stage-button" onclick="openBlock('moara')">
-                    <span class="icon">⚙️</span>
-                    <span class="label">Moară / Procesare</span>
-                </button>
-                
-                <button class="stage-button" onclick="openBlock('iot')">
-                    <span class="icon">📡</span>
-                    <span class="label">Senzori IoT</span>
-                </button>
-                
-                <button class="stage-button" onclick="openBlock('magazin')">
-                    <span class="icon">🏪</span>
-                    <span class="label">Magazin</span>
-                </button>
+            <div class="interface">
+                <button class="btn-ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detaliile blocului fermă"></button>
+                <button class="btn-transport" onclick="openBlock('transport')" aria-label="Transport - Vezi detaliile blocului de transport"></button>
+                <button class="btn-moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detaliile blocului de procesare"></button>
+                <button class="btn-iot" onclick="openBlock('iot')" aria-label="Senzori IoT - Vezi detaliile blocului de monitorizare"></button>
+                <button class="btn-magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detaliile blocului final"></button>
             </div>
         </main>
     </div>
