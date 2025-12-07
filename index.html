@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasabilitate Blockchain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistem de Trasabilitate Blockchain</h1>
+            <p>Urmărește produsele de la fermă la magazin</p>
+        </header>
+
+        <main>
+            <div class="buttons-grid">
+                <button class="stage-button" data-stage="ferma">
+                    <span class="icon">🚜</span>
+                    <span class="label">Ferma</span>
+                </button>
+                
+                <button class="stage-button" data-stage="transport">
+                    <span class="icon">🚚</span>
+                    <span class="label">Transport & Logistică</span>
+                </button>
+                
+                <button class="stage-button" data-stage="moara">
+                    <span class="icon">⚙️</span>
+                    <span class="label">Moară / Procesare</span>
+                </button>
+                
+                <button class="stage-button" data-stage="senzori">
+                    <span class="icon">📡</span>
+                    <span class="label">Senzori IoT</span>
+                </button>
+                
+                <button class="stage-button" data-stage="magazin">
+                    <span class="icon">🏪</span>
+                    <span class="label">Magazin</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            
+            <div class="block-info">
+                <div class="info-section">
+                    <h3>Hash Anterior</h3>
+                    <div id="previous-hash" class="hash-display"></div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Date Block</h3>
+                    <div id="block-data" class="data-display">
+                        <p><em>Datele vor fi completate ulterior</em></p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Hash Curent (SHA-256)</h3>
+                    <div id="current-hash" class="hash-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
