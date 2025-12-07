@@ -211,3 +211,21 @@ body {
         font-size: 1.4rem;
     }
 }
+
+@media (max-width: 900px) {
+    .interface {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    .btn-ferma       { top: 28%; left: 7%;  width: 22%; height: 12%; }
+    .btn-transport   { top: 28%; left: 30%; width: 22%; height: 12%; }
+    .btn-moara       { top: 28%; left: 53%; width: 22%; height: 12%; }
+    .btn-brutaria    { top: 28%; left: 76%; width: 22%; height: 12%; }
+    .btn-magazin     { top: 46%; left: 36%; width: 28%; height: 14%; }
+    .btn-certificari { top: 72%; left: 10%; width: 36%; height: 14%; }
+    .btn-verificare  { top: 72%; left: 54%; width: 36%; height: 14%; }
+}
