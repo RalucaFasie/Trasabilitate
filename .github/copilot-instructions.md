@@ -71,7 +71,7 @@ This is a blockchain traceability demonstration application for the bread produc
 - Test all interactive buttons and modals
 - Verify keyboard navigation works for accessibility
 
-## No Automated Tests
+## Automated Testing
 - This project currently has no automated test suite
 - Manual testing is required for any changes
 
@@ -85,4 +85,4 @@ This is a blockchain traceability demonstration application for the bread produc
 # References
 
 - Web Crypto API: [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
-- SHA-256 Hashing: Used for blockchain integrity verification
+- SHA-256 Hashing: [SubtleCrypto.digest() method](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest) - Used for blockchain integrity verification
