@@ -8,13 +8,6 @@
 </head>
 <body>
     <div class="interface">
-        <div class="mobile-header">
-            <h1 class="mobile-title">Trasabilitate pâine<br>LANȚ ALIMENTAR DIGITAL</h1>
-            <div class="mobile-qr">
-                <img src="assets/qr-code.svg" alt="QR Code">
-            </div>
-        </div>
-
         <!-- Invisible Hotspots (Desktop only) -->
         <div class="hotspot btn-ferma" onclick="openBlock('ferma')"></div>
         <div class="hotspot btn-transport" onclick="openBlock('transport')"></div>
@@ -24,56 +17,21 @@
         <div class="hotspot btn-certificari" onclick="openCertificari()"></div>
         <div class="hotspot btn-blockchain" onclick="openBlockchainVerification()"></div>
 
-        <!-- Mobile SVG Click-map -->
-        <div class="mobile-shell">
-            <img src="assets/mobile.png" alt="Mobile Background" class="mobile-bg">
-            <svg class="mobile-map" viewBox="0 0 1024 1536" xmlns="http://www.w3.org/2000/svg">
-                <rect class="area-ferma" x="51" y="522" width="922" height="107" onclick="openBlock('ferma')"/>
-                <rect class="area-transport" x="51" y="660" width="922" height="107" onclick="openBlock('transport')"/>
-                <rect class="area-moara" x="51" y="799" width="922" height="107" onclick="openBlock('moara')"/>
-                <rect class="area-brutaria" x="51" y="937" width="922" height="107" onclick="openBlock('brutaria')"/>
-                <rect class="area-magazin" x="51" y="1075" width="922" height="107" onclick="openBlock('magazin')"/>
-                <rect class="area-certificari" x="51" y="1229" width="430" height="107" onclick="openCertificari()"/>
-                <rect class="area-blockchain" x="543" y="1229" width="430" height="107" onclick="openBlockchainVerification()"/>
+        <!-- Mobile SVG Fullscreen Interface -->
+        <div class="mobile-svg-container">
+            <svg class="mobile-svg" viewBox="0 0 1024 1536" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <!-- Background Image embedded in SVG -->
+                <image href="assets/mobile.png" x="0" y="0" width="1024" height="1536" preserveAspectRatio="xMidYMid slice"/>
+                
+                <!-- Interactive Areas -->
+                <rect class="clickable-area area-ferma" x="51" y="522" width="922" height="107" onclick="openBlock('ferma')"/>
+                <rect class="clickable-area area-transport" x="51" y="660" width="922" height="107" onclick="openBlock('transport')"/>
+                <rect class="clickable-area area-moara" x="51" y="799" width="922" height="107" onclick="openBlock('moara')"/>
+                <rect class="clickable-area area-brutaria" x="51" y="937" width="922" height="107" onclick="openBlock('brutaria')"/>
+                <rect class="clickable-area area-magazin" x="51" y="1075" width="922" height="107" onclick="openBlock('magazin')"/>
+                <rect class="clickable-area area-certificari" x="51" y="1229" width="430" height="107" onclick="openCertificari()"/>
+                <rect class="clickable-area area-blockchain" x="543" y="1229" width="430" height="107" onclick="openBlockchainVerification()"/>
             </svg>
-        </div>
-
-        <!-- Background Image (mobile only - DEPRECATED, replaced by SVG) -->
-        <div class="mobile-background"></div>
-
-        <!-- Buttons Container (mobile only) -->
-        <div class="mobile-buttons">
-            <button class="mobile-btn" onclick="openBlock('ferma')">
-                <span class="btn-icon">🌾</span>
-                <span class="btn-label">FERMĂ</span>
-            </button>
-            <button class="mobile-btn" onclick="openBlock('transport')">
-                <span class="btn-icon">🚚</span>
-                <span class="btn-label">TRANSPORT ȘI LOGISTICĂ</span>
-            </button>
-            <button class="mobile-btn" onclick="openBlock('moara')">
-                <span class="btn-icon">🏭</span>
-                <span class="btn-label">MOARĂ ȘI PROCESARE</span>
-            </button>
-            <button class="mobile-btn" onclick="openBlock('brutaria')">
-                <span class="btn-icon">🍞</span>
-                <span class="btn-label">BRUTĂRIE</span>
-            </button>
-            <button class="mobile-btn" onclick="openBlock('magazin')">
-                <span class="btn-icon">🏪</span>
-                <span class="btn-label">MAGAZIN</span>
-            </button>
-            
-            <div class="mobile-bottom-buttons">
-                <button class="mobile-btn-small" onclick="openCertificari()">
-                    <span class="btn-icon-small">🏆</span>
-                    <span class="btn-label-small">CERTIFICATE</span>
-                </button>
-                <button class="mobile-btn-small" onclick="openBlockchainVerification()">
-                    <span class="btn-icon-small">🔗</span>
-                    <span class="btn-label-small">BLOCKCHAIN</span>
-                </button>
-            </div>
         </div>
     </div>
 
