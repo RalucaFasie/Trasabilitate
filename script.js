@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     hotspot.addEventListener('keydown', function(event) {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
+        // SVG elements require MouseEvent dispatch instead of .click()
         this.dispatchEvent(new MouseEvent('click', {
           bubbles: true,
           cancelable: true,
