@@ -210,7 +210,26 @@ html, body {
     height: 12%;
 }
 
-/* ----------- MOBILE LAYOUT (IMAGE-BASED WITH INVISIBLE BUTTONS) ----------- */
+/* Mobile Container - SVG Based Layout */
+.mobile-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.mobile-svg .hotspot {
+    cursor: pointer;
+}
+
+/* ----------- MOBILE LAYOUT (SVG-BASED WITH PERFECT ALIGNMENT) ----------- */
 @media (max-width: 768px) {
     html, body {
         margin: 0;
@@ -228,92 +247,13 @@ html, body {
     }
 
     /* Hide desktop hotspots on mobile */
-    .hotspot {
+    .interface > .hotspot {
         display: none !important;
     }
 
-    /* Mobile Container with Image Background - FULL SCREEN */
+    /* Show mobile container on mobile */
     .mobile-container {
         display: block;
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-    }
-
-    .mobile-background {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Invisible clickable buttons with DEBUG mode */
-    .click-btn {
-        position: absolute;
-        background: rgba(255, 0, 0, 0.3);
-        border: 1px solid red;
-        cursor: pointer;
-        z-index: 10;
-    }
-
-    /* Button positions based on 1024x1536 image dimensions converted to percentages */
-    /* Ferma: x=51, y=522, width=922, height=107 */
-    .btn-mobile-ferma {
-        left: 4.98%;
-        top: 33.98%;
-        width: 90.04%;
-        height: 6.97%;
-    }
-
-    /* Transport: x=51, y=660, width=922, height=107 */
-    .btn-mobile-transport {
-        left: 4.98%;
-        top: 42.97%;
-        width: 90.04%;
-        height: 6.97%;
-    }
-
-    /* Moara: x=51, y=799, width=922, height=107 */
-    .btn-mobile-moara {
-        left: 4.98%;
-        top: 52.02%;
-        width: 90.04%;
-        height: 6.97%;
-    }
-
-    /* Brutaria: x=51, y=937, width=922, height=107 */
-    .btn-mobile-brutaria {
-        left: 4.98%;
-        top: 61.00%;
-        width: 90.04%;
-        height: 6.97%;
-    }
-
-    /* Magazin: x=51, y=1075, width=922, height=107 */
-    .btn-mobile-magazin {
-        left: 4.98%;
-        top: 69.99%;
-        width: 90.04%;
-        height: 6.97%;
-    }
-
-    /* Certificari: x=51, y=1229, width=430, height=107 */
-    .btn-mobile-certificari {
-        left: 4.98%;
-        top: 80.01%;
-        width: 41.99%;
-        height: 6.97%;
-    }
-
-    /* Blockchain: x=543, y=1229, width=430, height=107 */
-    .btn-mobile-blockchain {
-        left: 53.03%;
-        top: 80.01%;
-        width: 41.99%;
-        height: 6.97%;
     }
 
     /* Modal adjustments for mobile */

@@ -17,52 +17,39 @@
         <div class="hotspot btn-certificari" onclick="openCertificari()"></div>
         <div class="hotspot btn-blockchain" onclick="openBlockchainVerification()"></div>
 
-        <!-- Mobile Image-based Interface -->
+        <!-- Mobile SVG-based Interface -->
         <div class="mobile-container">
-            <img src="assets/mobile.png" alt="Trasabilitate Blockchain Interface" class="mobile-background">
-            
-            <!-- Invisible clickable buttons positioned over the image buttons -->
-            <div class="click-btn btn-mobile-ferma" 
-                 onclick="openBlock('ferma')" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă"></div>
-            
-            <div class="click-btn btn-mobile-transport" 
-                 onclick="openBlock('transport')" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport"></div>
-            
-            <div class="click-btn btn-mobile-moara" 
-                 onclick="openBlock('moara')" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Moară - Vezi detalii blockchain pentru procesare la moară"></div>
-            
-            <div class="click-btn btn-mobile-brutaria" 
-                 onclick="openBlock('brutaria')" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Brutărie - Vezi detalii blockchain pentru brutărie"></div>
-            
-            <div class="click-btn btn-mobile-magazin" 
-                 onclick="openBlock('magazin')" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Magazin - Vezi detalii blockchain pentru magazin"></div>
-            
-            <div class="click-btn btn-mobile-certificari" 
-                 onclick="openCertificari()" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Certificate - Vezi certificările"></div>
-            
-            <div class="click-btn btn-mobile-blockchain" 
-                 onclick="openBlockchainVerification()" 
-                 role="button" 
-                 tabindex="0"
-                 aria-label="Blockchain - Verifică integritatea lanțului blockchain"></div>
+            <svg class="mobile-svg"
+                 viewBox="0 0 1024 1536"
+                 xmlns="http://www.w3.org/2000/svg"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <image href="assets/mobile.png"
+                       x="0" y="0"
+                       width="1024" height="1536" />
+
+                <rect x="60"  y="430"  width="900" height="130" fill="transparent"
+                      class="hotspot" onclick="openBlock('ferma')" />
+
+                <rect x="60"  y="570"  width="900" height="130" fill="transparent"
+                      class="hotspot" onclick="openBlock('transport')" />
+
+                <rect x="60"  y="710"  width="900" height="130" fill="transparent"
+                      class="hotspot" onclick="openBlock('moara')" />
+
+                <rect x="60"  y="850"  width="900" height="130" fill="transparent"
+                      class="hotspot" onclick="openBlock('brutaria')" />
+
+                <rect x="60"  y="990"  width="900" height="130" fill="transparent"
+                      class="hotspot" onclick="openBlock('magazin')" />
+
+                <rect x="60"  y="1150" width="430" height="110" fill="transparent"
+                      class="hotspot" onclick="openCertificari()" />
+
+                <rect x="534" y="1150" width="430" height="110" fill="transparent"
+                      class="hotspot" onclick="openBlockchainVerification()" />
+
+            </svg>
         </div>
     </div>
 

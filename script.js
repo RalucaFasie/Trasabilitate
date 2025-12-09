@@ -128,17 +128,6 @@ async function updateBlockchainChain() {
 // rulăm lanțul o singură dată la început când pagina se încarcă
 document.addEventListener('DOMContentLoaded', async () => {
   await updateBlockchainChain();
-  
-  // Add keyboard support for accessible buttons
-  const clickButtons = document.querySelectorAll('.click-btn');
-  clickButtons.forEach(button => {
-    button.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        this.click();
-      }
-    });
-  });
 });
 
 
