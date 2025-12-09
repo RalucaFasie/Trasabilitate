@@ -37,7 +37,7 @@ const blockData = {
       Operator: "Moara Călărași Nord SA",
       LotProcesare: "MCN-2025-LOT-020",
       Produs: "Făină albă tip 650",
-      Randament: "78%",
+      Randament: "98%",
       Umiditate: "14.2%",
       Data: "19.07.2025",
       Certificare: "ISO 22000 / HACCP"
