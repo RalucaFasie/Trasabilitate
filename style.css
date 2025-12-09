@@ -6,8 +6,11 @@ body {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
     font-family: "Montserrat", sans-serif;
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ==== CONTAINER BUTOANE ==== */
@@ -16,46 +19,59 @@ body {
     max-width: 480px;
     margin: 0 auto;
     padding-top: 320px; /* distanță corectă sub pâine */
+    padding-bottom: 30px;
 }
 
 /* ==== BUTOANE MARI ==== */
 .btn {
     width: 88%;
-    margin: 14px auto;
-    padding: 18px 22px;
+    margin: 10px auto;
+    padding: 14px 18px;
     border: none;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 14px;
-    font-size: 22px;
+    gap: 12px;
+    font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 16px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* ==== ICON ==== */
 .icon {
-    font-size: 32px;
+    font-size: 28px;
 }
 
 /* ==== BUTOANE MICI ==== */
 .bottom-row {
     width: 90%;
-    margin: 18px auto;
+    margin: 12px auto;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .btn.small {
     width: 48%;
-    padding: 14px 10px;
-    font-size: 16px;
+    padding: 12px 8px;
+    font-size: 14px;
 }
 
 .btn.small .icon {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 /* ==== CULORI EXACT CA ÎN DESIGN ==== */
@@ -87,20 +103,28 @@ body {
 /* ==== RESPONSIVE ==== */
 @media (max-width: 420px) {
     .btn {
-        font-size: 18px;
-        padding: 16px;
+        font-size: 16px;
+        padding: 12px 16px;
     }
     .icon {
-        font-size: 26px;
+        font-size: 24px;
     }
 }
 
 @media (max-width: 360px) {
     .btn {
-        font-size: 16px;
+        font-size: 15px;
+        padding: 11px 14px;
+    }
+    .icon {
+        font-size: 22px;
     }
     .bottom-row .btn.small {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 10px 6px;
+    }
+    .btn.small .icon {
+        font-size: 20px;
     }
 }
 
