@@ -128,6 +128,21 @@ async function updateBlockchainChain() {
 // rulăm lanțul o singură dată la început când pagina se încarcă
 document.addEventListener('DOMContentLoaded', async () => {
   await updateBlockchainChain();
+  
+  // Add keyboard support for SVG hotspots
+  const svgHotspots = document.querySelectorAll('.mobile-svg .hotspot[role="button"]');
+  svgHotspots.forEach(hotspot => {
+    hotspot.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        this.dispatchEvent(new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        }));
+      }
+    });
+  });
 });
 
 
