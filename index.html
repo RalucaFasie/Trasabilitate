@@ -7,52 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mobile-container">
-        <svg class="mobile-svg"
-             viewBox="0 0 1024 1536"
-             xmlns="http://www.w3.org/2000/svg"
-             preserveAspectRatio="xMidYMid meet">
+    <div class="app">
+        <div class="menu">
+            <button class="btn ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă">
+                <span class="emoji">🌾</span>
+                <span class="btn-text">Ferma</span>
+            </button>
 
-            <image href="assets/mobile.png"
-                   x="0" y="0"
-                   width="1024" height="1536" />
+            <button class="btn transport" onclick="openBlock('transport')" aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport">
+                <span class="emoji">🚚</span>
+                <span class="btn-text">Transport</span>
+            </button>
 
-            <rect x="60"  y="430"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('ferma')"
-                  role="button" tabindex="0"
-                  aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă" />
+            <button class="btn moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detalii blockchain pentru procesare la moară">
+                <span class="emoji">🏛️</span>
+                <span class="btn-text">Moară</span>
+            </button>
 
-            <rect x="60"  y="570"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('transport')"
-                  role="button" tabindex="0"
-                  aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport" />
+            <button class="btn brutarie" onclick="openBlock('brutaria')" aria-label="Brutărie - Vezi detalii blockchain pentru brutărie">
+                <span class="emoji">🍞</span>
+                <span class="btn-text">Brutărie</span>
+            </button>
 
-            <rect x="60"  y="710"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('moara')"
-                  role="button" tabindex="0"
-                  aria-label="Moară - Vezi detalii blockchain pentru procesare la moară" />
+            <button class="btn magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detalii blockchain pentru magazin">
+                <span class="emoji">🛒</span>
+                <span class="btn-text">Magazin</span>
+            </button>
 
-            <rect x="60"  y="850"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('brutaria')"
-                  role="button" tabindex="0"
-                  aria-label="Brutărie - Vezi detalii blockchain pentru brutărie" />
+            <div class="bottom-buttons">
+                <button class="btn small certificari" onclick="openCertificari()" aria-label="Certificate - Vezi certificările">
+                    <span class="emoji">🏅</span>
+                    <span class="btn-text">Certificate</span>
+                </button>
 
-            <rect x="60"  y="990"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('magazin')"
-                  role="button" tabindex="0"
-                  aria-label="Magazin - Vezi detalii blockchain pentru magazin" />
-
-            <rect x="60"  y="1150" width="430" height="110" fill="transparent"
-                  class="hotspot" onclick="openCertificari()"
-                  role="button" tabindex="0"
-                  aria-label="Certificate - Vezi certificările" />
-
-            <rect x="534" y="1150" width="430" height="110" fill="transparent"
-                  class="hotspot" onclick="openBlockchainVerification()"
-                  role="button" tabindex="0"
-                  aria-label="Blockchain - Verifică integritatea lanțului blockchain" />
-
-        </svg>
+                <button class="btn small blockchain" onclick="openBlockchainVerification()" aria-label="Blockchain - Verifică integritatea lanțului blockchain">
+                    <span class="emoji">⛓️</span>
+                    <span class="btn-text">Blockchain</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Modal Ferma -->
