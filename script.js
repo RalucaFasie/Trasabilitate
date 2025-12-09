@@ -4,13 +4,13 @@ const blockData = {
   ferma: {
     tip: "FERMA",
     data: {
-      producator: "Ferma Agro Prest 2005 SRL",
-      judet: "Călărași",
-      cultura: "Grâu panificație",
-      lot: "2025-CA-GR-004",
-      umiditate: "11.8%",
-      pesticide: "Conform registru fitosanitar 2025",
-      certificare: "APIA / MADR – Certificat lot 004",
+      Producator: "IordAgroMAD.SRL",
+      Judet: "Călărași",
+      Cultura: "Grâu panificație",
+      Lot: "2025-CA-GR-004",
+      Umiditate: "11.8%",
+      Pesticide: "Conform registru fitosanitar 2025",
+      Certificare: "APIA / MADR – Certificat lot 004",
     },
     previousHash: "0000000000000000", // primul block
     hash: ""
@@ -19,13 +19,13 @@ const blockData = {
   transport: {
     tip: "TRANSPORT & LOGISTICĂ",
     data: {
-      operator: "TransAgro Călărași",
-      camion: "CL-45-AGRO",
-      tip: "Cereale vrac",
-      greutate: "24.000 kg",
-      data: "18.07.2025",
-      destinatie: "Moara Călărași Nord",
-      documente: "Aviz nr. 2245"
+      Operator: "TransAgro Călărași",
+      Camion: "CL-45-AGRO",
+      Tip: "Cereale vrac",
+      Greutate: "24.000 kg",
+      Data: "18.07.2025",
+      Destinatie: "Moara Călărași Nord",
+      Documente: "Aviz nr. 2245"
     },
     previousHash: "",
     hash: ""
@@ -34,13 +34,13 @@ const blockData = {
   moara: {
     tip: "MOARĂ / PROCESARE",
     data: {
-      operator: "Moara Călărași Nord SA",
-      lotProcesare: "MCN-2025-LOT-020",
-      produs: "Făină albă tip 650",
-      randament: "78%",
-      umiditate: "14.2%",
-      data: "19.07.2025",
-      certificare: "ISO 22000 / HACCP"
+      Operator: "Moara Călărași Nord SA",
+      LotProcesare: "MCN-2025-LOT-020",
+      Produs: "Făină albă tip 650",
+      Randament: "78%",
+      Umiditate: "14.2%",
+      Data: "19.07.2025",
+      Certificare: "ISO 22000 / HACCP"
     },
     previousHash: "",
     hash: ""
@@ -49,13 +49,13 @@ const blockData = {
   brutaria: {
     tip: "BRUTĂRIA",
     data: {
-      brutarie: "Brutăria Caldă Călărași",
-      lotProductie: "BRU-2025-LOT-156",
-      produs: "Pâine albă artizanală",
-      greutate: "500g",
-      ingrediente: "Făină tip 650, apă, drojdie, sare",
-      data: "20.07.2025",
-      certificare: "ISO 22000 / HACCP"
+      Brutarie: "Brutăria Caldă Călărași",
+      LotProductie: "BRU-2025-LOT-156",
+      Produs: "Pâine albă artizanală",
+      Greutate: "500g",
+      Ingrediente: "Făină tip 650, apă, drojdie, sare",
+      Data: "20.07.2025",
+      Certificare: "ISO 22000 / HACCP"
     },
     previousHash: "",
     hash: ""
@@ -64,13 +64,13 @@ const blockData = {
   magazin: {
     tip: "MAGAZIN",
     data: {
-      magazin: "Profi Călărași – Central",
-      produs: "Pâine albă 650",
-      codProdus: "PRF-PAINE-650-2025",
-      ambalare: "20.07.2025",
-      expirare: "22.07.2025",
-      pret: "5.20 lei",
-      certificare: "Trasabilitate Blockchain Activă"
+      Magazin: "Profi Călărași – Central",
+      Produs: "Pâine albă 650",
+      CodProdus: "PRF-PAINE-650-2025",
+      Ambalare: "20.07.2025",
+      Expirare: "22.07.2025",
+      Pret: "5.20 lei",
+      Certificare: "Trasabilitate Blockchain Activă"
     },
     previousHash: "",
     hash: ""
