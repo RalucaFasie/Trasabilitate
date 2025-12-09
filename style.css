@@ -230,6 +230,80 @@ body {
         margin: 10% auto;
         padding: 20px;
     }
+    
+    /* Certificari modal mobile adjustments */
+    .certificari-modal h2 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    
+    .certificari-content {
+        padding: 8px;
+    }
+    
+    .certificari-content h3 {
+        font-size: 0.95rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .certificari-content p {
+        font-size: 0.85rem;
+        margin: 8px 0;
+        padding-left: 8px;
+        line-height: 1.5;
+    }
+    
+    .cert-id {
+        font-size: 0.8rem;
+    }
+}
+
+/* Certificari Modal Styles */
+.certificari-modal {
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.certificari-modal h2 {
+    color: #333;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 15px;
+}
+
+.certificari-content {
+    padding: 10px;
+}
+
+.certificari-content h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    border-left: 4px solid #667eea;
+}
+
+.certificari-content h3:first-child {
+    margin-top: 0;
+}
+
+.certificari-content p {
+    margin: 10px 0;
+    padding-left: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.cert-id {
+    color: #003d82;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 /* Nu introducem 100vh, poziționări în procente pentru layout-ul mobil sau cod de debugging */
