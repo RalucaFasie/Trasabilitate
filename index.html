@@ -2,69 +2,57 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trasabilitate Blockchain</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="interface">
-        <!-- Invisible Hotspots (Desktop only) -->
-        <div class="hotspot btn-ferma" onclick="openBlock('ferma')"></div>
-        <div class="hotspot btn-transport" onclick="openBlock('transport')"></div>
-        <div class="hotspot btn-moara" onclick="openBlock('moara')"></div>
-        <div class="hotspot btn-brutaria" onclick="openBlock('brutaria')"></div>
-        <div class="hotspot btn-magazin" onclick="openBlock('magazin')"></div>
-        <div class="hotspot btn-certificari" onclick="openCertificari()"></div>
-        <div class="hotspot btn-blockchain" onclick="openBlockchainVerification()"></div>
+    <div class="mobile-container">
+        <svg class="mobile-svg"
+             viewBox="0 0 1024 1536"
+             xmlns="http://www.w3.org/2000/svg"
+             preserveAspectRatio="xMidYMid meet">
 
-        <!-- Mobile SVG-based Interface -->
-        <div class="mobile-container">
-            <svg class="mobile-svg"
-                 viewBox="0 0 1024 1536"
-                 xmlns="http://www.w3.org/2000/svg"
-                 preserveAspectRatio="xMidYMid meet">
+            <image href="assets/mobile.png"
+                   x="0" y="0"
+                   width="1024" height="1536" />
 
-                <image href="assets/mobile.png"
-                       x="0" y="0"
-                       width="1024" height="1536" />
+            <rect x="60"  y="430"  width="900" height="130" fill="transparent"
+                  class="hotspot" onclick="openBlock('ferma')"
+                  role="button" tabindex="0"
+                  aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă" />
 
-                <rect x="60"  y="430"  width="900" height="130" fill="transparent"
-                      class="hotspot" onclick="openBlock('ferma')"
-                      role="button" tabindex="0"
-                      aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă" />
+            <rect x="60"  y="570"  width="900" height="130" fill="transparent"
+                  class="hotspot" onclick="openBlock('transport')"
+                  role="button" tabindex="0"
+                  aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport" />
 
-                <rect x="60"  y="570"  width="900" height="130" fill="transparent"
-                      class="hotspot" onclick="openBlock('transport')"
-                      role="button" tabindex="0"
-                      aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport" />
+            <rect x="60"  y="710"  width="900" height="130" fill="transparent"
+                  class="hotspot" onclick="openBlock('moara')"
+                  role="button" tabindex="0"
+                  aria-label="Moară - Vezi detalii blockchain pentru procesare la moară" />
 
-                <rect x="60"  y="710"  width="900" height="130" fill="transparent"
-                      class="hotspot" onclick="openBlock('moara')"
-                      role="button" tabindex="0"
-                      aria-label="Moară - Vezi detalii blockchain pentru procesare la moară" />
+            <rect x="60"  y="850"  width="900" height="130" fill="transparent"
+                  class="hotspot" onclick="openBlock('brutaria')"
+                  role="button" tabindex="0"
+                  aria-label="Brutărie - Vezi detalii blockchain pentru brutărie" />
 
-                <rect x="60"  y="850"  width="900" height="130" fill="transparent"
-                      class="hotspot" onclick="openBlock('brutaria')"
-                      role="button" tabindex="0"
-                      aria-label="Brutărie - Vezi detalii blockchain pentru brutărie" />
+            <rect x="60"  y="990"  width="900" height="130" fill="transparent"
+                  class="hotspot" onclick="openBlock('magazin')"
+                  role="button" tabindex="0"
+                  aria-label="Magazin - Vezi detalii blockchain pentru magazin" />
 
-                <rect x="60"  y="990"  width="900" height="130" fill="transparent"
-                      class="hotspot" onclick="openBlock('magazin')"
-                      role="button" tabindex="0"
-                      aria-label="Magazin - Vezi detalii blockchain pentru magazin" />
+            <rect x="60"  y="1150" width="430" height="110" fill="transparent"
+                  class="hotspot" onclick="openCertificari()"
+                  role="button" tabindex="0"
+                  aria-label="Certificate - Vezi certificările" />
 
-                <rect x="60"  y="1150" width="430" height="110" fill="transparent"
-                      class="hotspot" onclick="openCertificari()"
-                      role="button" tabindex="0"
-                      aria-label="Certificate - Vezi certificările" />
+            <rect x="534" y="1150" width="430" height="110" fill="transparent"
+                  class="hotspot" onclick="openBlockchainVerification()"
+                  role="button" tabindex="0"
+                  aria-label="Blockchain - Verifică integritatea lanțului blockchain" />
 
-                <rect x="534" y="1150" width="430" height="110" fill="transparent"
-                      class="hotspot" onclick="openBlockchainVerification()"
-                      role="button" tabindex="0"
-                      aria-label="Blockchain - Verifică integritatea lanțului blockchain" />
-
-            </svg>
-        </div>
+        </svg>
     </div>
 
     <!-- Modal Ferma -->
