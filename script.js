@@ -129,13 +129,18 @@ async function updateBlockchainChain() {
 document.addEventListener('DOMContentLoaded', async () => {
   await updateBlockchainChain();
   
-  // Add keyboard support for accessible buttons
-  const clickButtons = document.querySelectorAll('.click-btn');
-  clickButtons.forEach(button => {
-    button.addEventListener('keydown', function(event) {
+  // Add keyboard support for SVG hotspots
+  const svgHotspots = document.querySelectorAll('.mobile-svg .hotspot[role="button"]');
+  svgHotspots.forEach(hotspot => {
+    hotspot.addEventListener('keydown', function(event) {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        this.click();
+        // SVG elements require MouseEvent dispatch instead of .click()
+        this.dispatchEvent(new MouseEvent('click', {
+          bubbles: true,
+          cancelable: true,
+          view: window
+        }));
       }
     });
   });
