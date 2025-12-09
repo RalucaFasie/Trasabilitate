@@ -1,161 +1,107 @@
-/* Mobile-First Responsive Button Interface */
-:root{
-  --max-width: 500px;
-  --gap: 16px;
-  --btn-radius: 48px;
-  --shadow: 0 8px 20px rgba(13,13,13,0.08);
-  --font-stack: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* ==== BACKGROUND FULL SCREEN ==== */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/mobile.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
 }
 
-/* Reset minim */
-* { box-sizing: border-box; }
-html,body { height:100%; margin:0; font-family: var(--font-stack); background: #fff; color:#111; }
-
-/* Container central */
-.app {
-  min-height: 100vh;
-  display:flex;
-  align-items:flex-start;
-  justify-content:center;
-  padding: 28px 16px;
-}
-
-/* Menu centrat și fluid, max-width 500px */
+/* ==== CONTAINER BUTOANE ==== */
 .menu {
-  width:100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-top: 320px; /* distanță corectă sub pâine */
 }
 
-/* Stil general butoane */
+/* ==== BUTOANE MARI ==== */
 .btn {
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap: var(--gap);
-  width:100%;
-  padding: 18px 20px;
-  border-radius: var(--btn-radius);
-  border: none;
-  cursor: pointer;
-  box-shadow: var(--shadow);
-  font-weight: 700;
-  font-size: clamp(20px, 4.5vw, 24px); /* 20–24px */
-  letter-spacing: 0.8px;
-  margin: 0 0 18px 0; /* spacing între butoane: 14–20px */
-  align-items:center;
-  min-height: 78px;
-  background-clip: padding-box;
-}
-
-/* Emoji ca icon, scalabil */
-.emoji {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width: 56px;
-  height: 56px;
-  flex: 0 0 56px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.6);
-  font-size: clamp(26px, 6.5vw, 36px);
-  line-height:1;
-  text-align:center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
-}
-
-/* Text buton */
-.btn-text {
-  display:inline-block;
-  color: #111;
-  line-height:1;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-/* Culori specifice */
-.ferma { background: #f3e9cd; }
-.transport { background: #bfc98a; color: #fff; }
-.moara { background: #f0eddd; }
-.brutarie { background: #e7a862; color: #fff; }
-.magazin { background: #f1e7cd; }
-.certificari { background: #f7f2e4; }
-.blockchain { background: #f7f2e4; }
-
-/* Ajustează culoarea textului pentru butoanele cu fundal închis */
-.transport .btn-text,
-.brutarie .btn-text {
-  color: #fff;
-}
-
-/* Row pentru butoanele mici */
-.bottom-buttons {
-  display:flex;
-  gap: 10px;
-  justify-content:space-between;
-  align-items:center;
-  margin-top: 6px;
-}
-
-/* Butoane mici */
-.btn.small {
-  max-width: 48%;
-  flex: 1 1 48%;
-  font-size: clamp(16px, 3.8vw, 18px);
-  min-height: 66px;
-  padding: 12px 14px;
-  border-radius: 42px;
-  margin-bottom: 0;
-}
-
-/* Focus & accesibilitate */
-.btn:focus {
-  outline: 3px solid rgba(0,0,0,0.06);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(13,13,13,0.10);
-}
-
-/* Active */
-.btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 6px 16px rgba(13,13,13,0.06);
-}
-
-/* Resize emoji pentru butoane mici */
-.btn.small .emoji {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
-  font-size: clamp(20px, 5.5vw, 30px);
-}
-
-/* Responsive: sub 480px */
-@media (max-width: 480px) {
-  .app { padding: 20px 12px; }
-  .btn {
-    padding: 16px 16px;
+    width: 88%;
+    margin: 14px auto;
+    padding: 18px 22px;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
     gap: 14px;
-    font-size: clamp(18px, 5.6vw, 22px);
-    min-height: 72px;
-  }
-  .emoji { width: 50px; height:50px; flex:0 0 50px; font-size: clamp(22px, 6vw, 34px); }
-  .btn.small { min-height:64px; padding:12px; }
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    cursor: pointer;
 }
 
-/* Responsive: sub 360px — scădem ușor marginile și padding */
+/* ==== ICON ==== */
+.icon {
+    font-size: 32px;
+}
+
+/* ==== BUTOANE MICI ==== */
+.bottom-row {
+    width: 90%;
+    margin: 18px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn.small {
+    width: 48%;
+    padding: 14px 10px;
+    font-size: 16px;
+}
+
+.btn.small .icon {
+    font-size: 24px;
+}
+
+/* ==== CULORI EXACT CA ÎN DESIGN ==== */
+.ferma {
+    background: #f3e9cd;
+}
+
+.transport {
+    background: #bfc98a;
+}
+
+.moara {
+    background: #f0eddd;
+}
+
+.brutarie {
+    background: #e7a862;
+}
+
+.magazin {
+    background: #f4ead4;
+}
+
+.certificari,
+.blockchain {
+    background: #f7f2e4;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 420px) {
+    .btn {
+        font-size: 18px;
+        padding: 16px;
+    }
+    .icon {
+        font-size: 26px;
+    }
+}
+
 @media (max-width: 360px) {
-  .app { padding: 16px 10px; }
-  .btn { padding: 14px 12px; gap: 12px; font-size: clamp(16px, 6.8vw, 20px); min-height: 68px; }
-  .emoji { width:44px; height:44px; flex:0 0 44px; font-size: clamp(20px, 7.5vw, 30px); }
-  .btn.small .emoji { width:40px; height:40px; flex:0 0 40px; font-size: clamp(18px, 7.5vw, 26px); }
-  .btn.small { font-size: 15px; }
-}
-
-/* Asigură că butoanele ocupă suficient spațiu pe ecrane mari dar rămân fluide */
-@media (min-width: 900px) {
-  .menu { margin-top: 40px; }
-  .btn { max-width: 520px; }
+    .btn {
+        font-size: 16px;
+    }
+    .bottom-row .btn.small {
+        font-size: 14px;
+    }
 }
 
 /* Modal Styles */

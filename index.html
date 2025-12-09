@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasabilitate Blockchain</title>
+    <title>Trasabilitate Pâine</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <div class="menu">
-            <button class="btn ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă">
-                <span class="emoji">🌾</span>
-                <span class="btn-text">Ferma</span>
-            </button>
 
-            <button class="btn transport" onclick="openBlock('transport')" aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport">
-                <span class="emoji">🚚</span>
-                <span class="btn-text">Transport</span>
-            </button>
+<div class="menu">
+    
+    <button class="btn ferma" onclick="openBlock('ferma')">
+        <span class="icon">🌾</span>
+        <span class="text">FERMĂ</span>
+    </button>
 
-            <button class="btn moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detalii blockchain pentru procesare la moară">
-                <span class="emoji">🏛️</span>
-                <span class="btn-text">Moară</span>
-            </button>
+    <button class="btn transport" onclick="openBlock('transport')">
+        <span class="icon">🚚</span>
+        <span class="text">TRANSPORT ȘI LOGISTICĂ</span>
+    </button>
 
-            <button class="btn brutarie" onclick="openBlock('brutaria')" aria-label="Brutărie - Vezi detalii blockchain pentru brutărie">
-                <span class="emoji">🍞</span>
-                <span class="btn-text">Brutărie</span>
-            </button>
+    <button class="btn moara" onclick="openBlock('moara')">
+        <span class="icon">🏛️</span>
+        <span class="text">MOARĂ ȘI PROCESARE</span>
+    </button>
 
-            <button class="btn magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detalii blockchain pentru magazin">
-                <span class="emoji">🛒</span>
-                <span class="btn-text">Magazin</span>
-            </button>
+    <button class="btn brutarie" onclick="openBlock('brutaria')">
+        <span class="icon">🍞</span>
+        <span class="text">BRUTĂRIE</span>
+    </button>
 
-            <div class="bottom-buttons">
-                <button class="btn small certificari" onclick="openCertificari()" aria-label="Certificate - Vezi certificările">
-                    <span class="emoji">🏅</span>
-                    <span class="btn-text">Certificate</span>
-                </button>
+    <button class="btn magazin" onclick="openBlock('magazin')">
+        <span class="icon">🛒</span>
+        <span class="text">MAGAZIN</span>
+    </button>
 
-                <button class="btn small blockchain" onclick="openBlockchainVerification()" aria-label="Blockchain - Verifică integritatea lanțului blockchain">
-                    <span class="emoji">⛓️</span>
-                    <span class="btn-text">Blockchain</span>
-                </button>
-            </div>
-        </div>
+    <div class="bottom-row">
+        <button class="btn small certificari" onclick="openCertificari()">
+            <span class="icon">🏅</span>
+            <span class="text">CERTIFICATE</span>
+        </button>
+
+        <button class="btn small blockchain" onclick="openBlockchainVerification()">
+            <span class="icon">⛓️</span>
+            <span class="text">BLOCKCHAIN</span>
+        </button>
     </div>
+
+</div>
 
     <!-- Modal Ferma -->
     <div id="modal-ferma" class="modal">
