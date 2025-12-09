@@ -199,7 +199,7 @@ function capitalize(str) {
 // === 7. FUNCȚII PENTRU CERTIFICĂRI ȘI VERIFICARE BLOCKCHAIN ===
 
 function openCertificari() {
-  alert("Certificări: ISO 22000, HACCP, APIA/MADR - Toate certificările sunt active și verificabile.");
+  document.getElementById('modal-certificari').style.display = "block";
 }
 
 function openBlockchainVerification() {
