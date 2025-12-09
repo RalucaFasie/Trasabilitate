@@ -1,32 +1,362 @@
-/* Stil curat pentru interfața mobilă SVG */
-:root {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+/* Mobile-first styles pentru butoanele din proiectul Trasabilitate Pâine */
+
+/* Background responsive pentru mobile */
+:root{
+  --font-family: "Montserrat", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --shadow: 0 6px 18px rgba(0,0,0,0.12);
+  --gap: 18px;
+  --btn-radius: 50px;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/* Body & background */
+html,body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("assets/mobile.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: #111;
 }
 
-.mobile-container {
+/* Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 6%;
+  box-sizing: border-box;
+}
+
+/* Menu — poziționare în jos sub elementul de design (ex: pâine) */
+.menu {
+  width: 100%;
+  margin-top: 260px; /* conform cerinței */
+}
+
+/* Butoane principale */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  padding: 0 26px;
+  width: 90%;
+  margin: 0 auto 20px auto; /* spacing între butoane: 20px */
+  border-radius: var(--btn-radius);
+  border: none;
+  font-weight: 700;
+  font-size: 24px; /* între 22-26px, setat în mijloc */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  min-height: 86px; /* între 80–90px */
+  height: 86px;
+  align-items: center;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* focus accessibility */
+.btn:focus {
+  box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+  transform: translateY(-2px);
+  outline: 3px solid rgba(0,0,0,0.06);
+}
+
+/* icon wrapper (rotund mic) */
+.icon-wrapper {
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+/* smaller variant for small bottom buttons */
+.icon-wrapper.small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+}
+
+/* img icon inside wrapper */
+.icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+/* text styling inside button */
+.btn-text {
+  display: inline-block;
+  color: #1b1b1b;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* Culori exacte pentru fiecare buton */
+.ferma {
+  background: #f3e9cd;
+}
+.transport {
+  background: #bfc98a;
+}
+.moara {
+  background: #f0eddd;
+}
+.brutarie {
+  background: #e7a862;
+  color: #1b1b1b;
+}
+.magazin {
+  background: #f1e7cd;
+}
+.certificari {
+  background: #f7f2e4;
+}
+.blockchain {
+  background: #f7f2e4;
+}
+
+/* Small buttons row */
+.bottom-buttons {
+  width: 90%;
+  margin: 10px auto 40px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Small buttons style override */
+.btn.small {
+  width: 45%;
+  font-size: 18px;
+  min-height: 70px;
+  height: 70px;
+  border-radius: 40px;
+  padding: 0 18px;
+}
+
+/* Ajustări text pentru small */
+.btn.small .btn-text {
+  font-size: 18px;
+  letter-spacing: 0.6px;
+}
+
+/* Contrast tweak: pentru fundaluri luminoase, mai închis textul */
+.ferma .btn-text,
+.moara .btn-text,
+.magazin .btn-text,
+.certificari .btn-text,
+.blockchain .btn-text {
+  color: #111;
+}
+
+/* Transport (verde-oliv) — text alb pentru contrast mai bun */
+.transport .btn-text {
+  color: #fff;
+}
+
+/* Brutarie (portocaliu) — text alb pentru vizibilitate */
+.brutarie .btn-text {
+  color: #fff;
+}
+
+/* Responsive: desktop adjustments (păstrează aspectul mobile-first dar optimizează) */
+@media (min-width: 900px) {
+  .app {
+    padding: 0 12%;
+  }
+
+  .menu {
+    margin-top: 320px; /* mai jos pe desktop conform layout-ului */
+    max-width: 720px;
+  }
+
+  .btn {
     width: 100%;
-    height: auto;
-    overflow-y: auto;
-}
+    font-size: 24px;
+    min-height: 90px;
+    height: 90px;
+  }
 
-.mobile-svg {
+  .bottom-buttons {
     width: 100%;
-    height: auto;
-    display: block;
+    margin-top: 18px;
+  }
+
+  .btn.small {
+    min-height: 76px;
+    height: 76px;
+  }
 }
 
-.hotspot {
+/* Touch & visual polish */
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Ensure text doesn't overflow badly */
+.btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 90px);
+}
+
+/* For very small phones, slightly reduce sizes */
+@media (max-width: 320px) {
+  .btn {
+    font-size: 20px;
+    min-height: 78px;
+    height: 78px;
+  }
+  .btn .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+    position: relative;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+#modal-title {
+    color: #667eea;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.block-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.info-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.hash-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+    color: #764ba2;
+    border: 1px solid #e0e0e0;
+}
+
+.data-display {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 80px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.data-display p {
+    margin: 8px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.data-display b {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Modal adjustments for mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
 }
 
 /* Modal Styles */

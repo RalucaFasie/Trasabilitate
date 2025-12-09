@@ -4,55 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trasabilitate Blockchain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mobile-container">
-        <svg class="mobile-svg"
-             viewBox="0 0 1024 1536"
-             xmlns="http://www.w3.org/2000/svg"
-             preserveAspectRatio="xMidYMid meet">
+    <div class="app">
+        <div class="menu">
+            <!-- Buton Ferma -->
+            <button class="btn ferma" onclick="openBlock('ferma')" aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă">
+                <span class="icon-wrapper">
+                    <img src="assets/icons/ferma.png" alt="Ferma" class="icon">
+                </span>
+                <span class="btn-text">Ferma</span>
+            </button>
 
-            <image href="assets/mobile.png"
-                   x="0" y="0"
-                   width="1024" height="1536" />
+            <!-- Buton Transport -->
+            <button class="btn transport" onclick="openBlock('transport')" aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport">
+                <span class="icon-wrapper">
+                    <img src="assets/icons/transport.png" alt="Transport" class="icon">
+                </span>
+                <span class="btn-text">Transport</span>
+            </button>
 
-            <rect x="60"  y="430"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('ferma')"
-                  role="button" tabindex="0"
-                  aria-label="Ferma - Vezi detalii blockchain pentru etapa de fermă" />
+            <!-- Buton Moară -->
+            <button class="btn moara" onclick="openBlock('moara')" aria-label="Moară - Vezi detalii blockchain pentru procesare la moară">
+                <span class="icon-wrapper">
+                    <img src="assets/icons/moara.png" alt="Moară" class="icon">
+                </span>
+                <span class="btn-text">Moară</span>
+            </button>
 
-            <rect x="60"  y="570"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('transport')"
-                  role="button" tabindex="0"
-                  aria-label="Transport și Logistică - Vezi detalii blockchain pentru transport" />
+            <!-- Buton Brutărie -->
+            <button class="btn brutarie" onclick="openBlock('brutaria')" aria-label="Brutărie - Vezi detalii blockchain pentru brutărie">
+                <span class="icon-wrapper">
+                    <img src="assets/icons/brutarie.png" alt="Brutărie" class="icon">
+                </span>
+                <span class="btn-text">Brutărie</span>
+            </button>
 
-            <rect x="60"  y="710"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('moara')"
-                  role="button" tabindex="0"
-                  aria-label="Moară - Vezi detalii blockchain pentru procesare la moară" />
+            <!-- Buton Magazin -->
+            <button class="btn magazin" onclick="openBlock('magazin')" aria-label="Magazin - Vezi detalii blockchain pentru magazin">
+                <span class="icon-wrapper">
+                    <img src="assets/icons/magazin.png" alt="Magazin" class="icon">
+                </span>
+                <span class="btn-text">Magazin</span>
+            </button>
 
-            <rect x="60"  y="850"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('brutaria')"
-                  role="button" tabindex="0"
-                  aria-label="Brutărie - Vezi detalii blockchain pentru brutărie" />
+            <!-- Butoane mici pe aceeași linie -->
+            <div class="bottom-buttons">
+                <button class="btn small certificari" onclick="openCertificari()" aria-label="Certificate - Vezi certificările">
+                    <span class="icon-wrapper small">
+                        <img src="assets/icons/certificat.png" alt="Certificate" class="icon">
+                    </span>
+                    <span class="btn-text">Certificate</span>
+                </button>
 
-            <rect x="60"  y="990"  width="900" height="130" fill="transparent"
-                  class="hotspot" onclick="openBlock('magazin')"
-                  role="button" tabindex="0"
-                  aria-label="Magazin - Vezi detalii blockchain pentru magazin" />
-
-            <rect x="60"  y="1150" width="430" height="110" fill="transparent"
-                  class="hotspot" onclick="openCertificari()"
-                  role="button" tabindex="0"
-                  aria-label="Certificate - Vezi certificările" />
-
-            <rect x="534" y="1150" width="430" height="110" fill="transparent"
-                  class="hotspot" onclick="openBlockchainVerification()"
-                  role="button" tabindex="0"
-                  aria-label="Blockchain - Verifică integritatea lanțului blockchain" />
-
-        </svg>
+                <button class="btn small blockchain" onclick="openBlockchainVerification()" aria-label="Blockchain - Verifică integritatea lanțului blockchain">
+                    <span class="icon-wrapper small">
+                        <img src="assets/icons/blockchain.png" alt="Blockchain" class="icon">
+                    </span>
+                    <span class="btn-text">Blockchain</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- Modal Ferma -->
